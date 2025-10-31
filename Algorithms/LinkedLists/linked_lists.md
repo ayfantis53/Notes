@@ -10,3 +10,5 @@
         >* array data is stored contiguously in memory.
         >* all elements in an array are stored right next to eachother in computers memory.
         >* affects performance.
+* Types of Linked Lists
+    - Single Linked List:

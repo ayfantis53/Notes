@@ -3,7 +3,7 @@
 #  Code to traverse a linked list
 # ---------------------------------------------
 
-class node:
+class Node:
     """ Class that defines our Node """
 
     def __init__(self, value):
@@ -11,7 +11,12 @@ class node:
         self.next  = None
 
 def printLinkedList(head):
-    """ print out linked list """
+    """ 
+    print out linked list 
+
+    Args:
+        head (Node): first Node in Linked List.
+    """
 
     current = head
     
@@ -24,10 +29,10 @@ def printLinkedList(head):
 if __name__ == "__main__":
     """ create a hardcoded linkedlist """
 
-    a = node('A')
-    b = node('B')
-    c = node('C')
-    d = node('D')
+    a = Node('A')
+    b = Node('B')
+    c = Node('C')
+    d = Node('D')
 
     a.next = b
     b.next = c

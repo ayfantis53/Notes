@@ -27,6 +27,8 @@ c.next = d;
 
 /**
  * print out linked list
+ * 
+ * @param {Node} head The first node.
  */
 const printLinkedList = (head) => {
     let current = head;
