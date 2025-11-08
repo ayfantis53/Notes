@@ -27,7 +27,7 @@ def traverse(head):
         output += head.value + " -> " 
         head = head.next
 
-    print(f'{output} null')
+    print(f'{output}null')
 
 def traverseRecur(head, output):
     """ 
@@ -41,7 +41,7 @@ def traverseRecur(head, output):
         void
     """
     if head == None:
-        print(f'{output} null')
+        print(f'{output}null')
         return
     
     traverseRecur(head.next, output + head.value + " -> ")
