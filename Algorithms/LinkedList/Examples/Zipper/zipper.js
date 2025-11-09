@@ -20,37 +20,33 @@ class Node {
 /**
  * Zipper combine two linked lists
  * 
- * @param {Node} head1 first Node in Linked List.
- * @param {Node} head2 first Node in Linked List.
+ * @param {Node} head1 first Node in first Linked List.
+ * @param {Node} head2 first Node in second Linked List.
  * @returns Node of head1
  */
 const zipper = (head1, head2) => {
 
     let count = 0;
     tail      = head1;
-    current   = head1.next;
+    current1  = head1.next;
     current2  = head2;
 
-    while (current && current2) {
+    while (current1 && current2) {
         if (count % 2 === 0) {
             tail.next = current2;
             current2  = current2.next
         }
         else {
-            tail.next = current;
-            current   = current.next;
+            tail.next = current1;
+            current1  = current1.next;
         }
 
         tail = tail.next;
         count++;
     }
 
-    if (current !== null) {
-        tail.next = current;
-    }
-    if (current2 !== null) {
-        tail.next = current2;
-    }
+    if (current1 !== null) { tail.next = current1; }
+    if (current2 !== null) { tail.next = current2; }
 
     return head1;
 };
@@ -58,9 +54,9 @@ const zipper = (head1, head2) => {
 /**
  * print out all values of linked list recursively
  * 
- * @param {Node} head1 first Node in Linked List.
- * @param {Node} head2 first Node in Linked List.
- * @returns void
+ * @param {Node} head1 first Node in first Linked List.
+ * @param {Node} head2 first Node in second Linked List.
+ * @returns Node of head1
  */
 const zipperRecur = (head1, head2) => {
     if (!head1 && !head2) { return null; }
