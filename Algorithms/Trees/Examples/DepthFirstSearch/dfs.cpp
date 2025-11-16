@@ -48,7 +48,7 @@ auto dfs(Node* root) -> std::vector<char>
 }
 
 /// @brief Depth First Search of a Binary Tree Recursion
-/// @param root         first Node in LinkedList. 
+/// @param root         first Node in Binary Tree. 
 /// @param combinedList list of all nodes we visited.
 /// @returns [array] of all nodes in depth first search order
 auto dfsRecurs(Node* root, std::vector<char>& combinedList) -> std::vector<char>
@@ -87,7 +87,7 @@ auto printValues(std::vector<char> list) -> void
 }
 
 /// @brief Main Code
-int main()
+auto main() -> int
 {
     Node* a = new Node('a');
     Node* b = new Node('b');

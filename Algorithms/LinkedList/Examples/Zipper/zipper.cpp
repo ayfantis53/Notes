@@ -90,7 +90,7 @@ auto traverse(Node* head) -> void
 
 
 /// @brief Main Code
-int main()
+auto main() -> int
 {
     Node* a = new Node("A");
     Node* c = new Node("C");

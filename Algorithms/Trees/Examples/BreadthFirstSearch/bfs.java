@@ -31,7 +31,7 @@ public class bfs {
     /**
      * Depth First Search of a Binary Tree
      * 
-     * @param root first Node in LinkedList. 
+     * @param root first Node in Binary Tree.
      * @return [array] of all nodes in depth first search order
      */
     public static List<Character> bfs(Node root) {

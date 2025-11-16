@@ -1,6 +1,6 @@
 /** ---------------------------------------------
  * 
- * Depth First Search of a Binary Tree
+ * Find if a value is in a Binary Tree
  --------------------------------------------- */
 
  /**
@@ -19,11 +19,11 @@ class Node {
 };
 
 /**
- * Depth First Search of a Binary Tree
+ * Depth First Search Find if a value is in a Binary Tree
  * 
  * @param {Node}   root   first Node in Binary Tree. 
  * @param {String} target  value to find in Binary Tree.
- * @returns [array] of all nodes in depth first search order
+ * @returns [bool] if value was found in tree
  */
 const findDFS = (root, target) => {
     const nodes  = [ root ];
@@ -31,7 +31,7 @@ const findDFS = (root, target) => {
     while (nodes.length > 0) {
         const current = nodes.pop();
         if (current.value === target) {
-            console.log(`${target} FOUND in tree!`) 
+            console.log(`[${target}] FOUND in tree!`) 
             return true;
         }
 
@@ -39,16 +39,16 @@ const findDFS = (root, target) => {
         if (current.left)  { nodes.push(current.left); }
     }
 
-    console.log(`${target} NOT FOUND in tree!`) 
+    console.log(`[${target}] NOT FOUND in tree!`) 
     return false;
 }
 
 /**
- * Breadth First Search of a Binary Tree
+ * Breadth First Search Find if a value is in a Binary Tree
  * 
  * @param {Node}   root   first Node in Binary Tree. 
  * @param {String} target  value to find in Binary Tree.
- * @returns [array] of all nodes in depth first search order
+ * @returns [bool] if value was found in tree
  */
 const findBFS = (root, target) => {
     const nodes  = [ root ];
@@ -56,7 +56,7 @@ const findBFS = (root, target) => {
     while (nodes.length > 0) {
         const current = nodes.shift();
         if (current.value === target) {
-            console.log(`${target} FOUND in tree!`) 
+            console.log(`[${target}] FOUND in tree!`) 
             return true;
         }
 
@@ -64,16 +64,16 @@ const findBFS = (root, target) => {
         if (current.left)  { nodes.push(current.left); }
     }
 
-    console.log(`${target} NOT FOUND in tree!`) 
+    console.log(`[${target}] NOT FOUND in tree!`) 
     return false;
 }
 
 /**
- * Depth First Search of a Binary Tree Recursion
+ * Depth First Search Find if a value is in a Binary Tree Recursion
  * 
  * @param {Node}   root   first Node in Binary Tree.
  * @param {String} target value to find in Binary Tree.
- * @returns [array] of all nodes in depth first search order
+ * @returns [bool] if value was found in tree
  */
 const findDFSRecurs = (root, target) => {
     if (root === null)         { return false; }
@@ -99,10 +99,10 @@ const findDFSRecurs = (root, target) => {
  */
 const printResult = (isFound, target) => {
     if (isFound) {
-        console.log(`${target} FOUND in tree!`);
+        console.log(`[${target}] FOUND in tree!`);
     }
     else {
-        console.log(`${target} NOT FOUND in tree!`);
+        console.log(`[${target}] NOT FOUND in tree!`);
     }
 }
 
@@ -123,7 +123,7 @@ c.right = f;
 
 
 // Non recursive function calls.
-console.log("--------- DFS ---------")
+console.log("--------- DFS ---------");
 findDFS(a, 'a');
 findDFS(a, 'b');
 findDFS(a, 'c');
@@ -132,7 +132,7 @@ findDFS(a, 'e');
 findDFS(a, 'f');
 findDFS(a, 'g');
 
-console.log("--------- BFS ---------")
+console.log("--------- BFS ---------");
 findBFS(a, 'a');
 findBFS(a, 'b');
 findBFS(a, 'c');
@@ -141,7 +141,7 @@ findBFS(a, 'e');
 findBFS(a, 'f');
 findBFS(a, 'g');
 
-console.log("---- RECURSION DFS ----")
+console.log("---- RECURSION DFS ----");
 
 // Recursive function calls.
 printResult(findDFSRecurs(a, 'a'), 'a');

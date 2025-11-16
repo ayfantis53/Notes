@@ -62,7 +62,7 @@ auto getValueRecur(Node* head, int target, int count) -> int
 }
 
 /// @brief Main Code
-int main()
+auto main() -> int
 {
     Node* a = new Node('A');
     Node* b = new Node('B');

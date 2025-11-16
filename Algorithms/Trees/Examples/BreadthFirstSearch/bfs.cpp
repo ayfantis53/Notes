@@ -71,7 +71,7 @@ auto printValues(std::vector<char> list) -> void
 }
 
 /// @brief Main Code
-int main()
+auto main() -> int
 {
     Node* a = new Node('a');
     Node* b = new Node('b');

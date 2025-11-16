@@ -29,7 +29,7 @@ public class dfs {
     /**
      * Depth First Search of a Binary Tree
      * 
-     * @param root first Node in LinkedList. 
+     * @param root first Node in Binary Tree.
      * @return [array] of all nodes in depth first search order
      */
     public static List<Character> dfs(Node root) {
@@ -53,7 +53,7 @@ public class dfs {
     /**
      * Depth First Search of a Binary Tree Recursion
      * 
-     * @param root         first Node in LinkedList. 
+     * @param root         first Node in Binary Tree.
      * @param combinedList list of all nodes we visited.
      * @return [array] of all nodes in depth first search order
      */

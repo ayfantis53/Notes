@@ -50,7 +50,7 @@ auto traverseRecur(Node* head, std::string output) -> int
 }
 
 /// @brief Main Code
-int main()
+auto main() -> int
 {
     Node* a = new Node("A");
     Node* b = new Node("B");

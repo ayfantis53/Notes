@@ -49,7 +49,7 @@ auto sumRecur(Node* head, int sum) -> int
 }
 
 /// @brief Main Code
-int main()
+auto main() -> int
 {
     Node* a = new Node(2);
     Node* b = new Node(4);
