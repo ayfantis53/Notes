@@ -22,3 +22,23 @@
         * > This approach starts by solving the smallest subproblems first and then uses their solutions to build up the solutions for larger subproblems.
         * > eventually reaching the solution for the original problem. 
         * > The results are typically stored in a table (array) and filled in a systematic order.
+- Memoization Recipe
+    1. Make it work
+        - visualize problem as a tree.
+        - implement tree using recursion.
+        - test it.
+    2. Make it efficient
+        - add a memo object.
+        - add a base case to return memo values.
+        - store return values into memo.
+- Tabulation Recipe
+    1. Visualize the problem as a table.
+    2. Size the table based on the inputs.
+    3. Initialize the table with default values.
+    4. Seed the trivial answer into the table.
+    5. Iterate through the table.
+    6. Fill further positions based on the current position.
+
+**REFERENCE**
+------------------------------------------------------------
+- [https://www.youtube.com/watch?v=oBt53YbR9Kk]

@@ -7,10 +7,10 @@ import java.util.HashMap;
  */
 public class fibonacci {
     /**
-     * Function that calculates fibonacci sequence of a given number
+     * Function that calculates the nth Fibonacci number
      * 
-     * @param input input given number to find fibonacci sequence of.
-     * @return [Long] the resulting fibonacci number
+     * @param input input The index of the Fibonacci number to calculate (non-negative integer).
+     * @return [Long] The nth Fibonacci number.
      */
     public static long fibonacci(int input) {
         if (input <= 2) { return 1; }
@@ -19,11 +19,11 @@ public class fibonacci {
     }
 
     /**
-     * Memoized function that calculates fibonacci sequence of a given number
+     * Memoized function that calculates the nth Fibonacci number
      * 
-     * @param input input given number to find fibonacci sequence of.
+     * @param input input The index of the Fibonacci number to calculate (non-negative integer).
      * @param memo  used as a cache to store previously computed values.
-     * @return [Long] the resulting fibonacci number
+     * @return [Long] The nth Fibonacci number.
      */
     public static long fibonacciMemoized(int input, HashMap<Integer, Long> memo) {
         if (memo.containsKey(input)) { return memo.get(input); }

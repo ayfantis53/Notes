@@ -4,9 +4,9 @@
 
 std::unordered_map<int, long long> memo;
 
-/// @brief Function that calculates fibonacci sequence of a given number
-/// @param input given number to find fibonacci sequence of.
-/// @return [Long] the resulting fibonacci number
+/// @brief Function that calculates the nth Fibonacci number
+/// @param input The index of the Fibonacci number to calculate (non-negative integer).
+/// @return [Long] The nth Fibonacci number.
 auto fibonacci(int input) -> long long
 {
     if (input <= 2) { return 1; }
@@ -14,10 +14,10 @@ auto fibonacci(int input) -> long long
     return fibonacci(input - 1) + fibonacci(input - 2); 
 }
 
-/// @brief Function that calculates fibonacci sequence of a given number
-/// @param input given number to find fibonacci sequence of.
+/// @brief Function that calculates the nth Fibonacci number
+/// @param input The index of the Fibonacci number to calculate (non-negative integer).
 /// @param memo  used as a cache to store previously computed values.
-/// @return [Long] the resulting fibonacci number
+/// @return [Long] The nth Fibonacci number.
 auto fibonacciMemoized(int input) -> long long 
 {
     if (memo.count(input)) { return memo[input]; }
@@ -53,4 +53,6 @@ auto main() -> int
     memo.clear();
     std::cout << "Fibonacci number MEMOIZED of " << input7 << " is:  [" << fibonacciMemoized(input7) << "]" << std::endl;
     memo.clear();
+
+    return 1;
 }

@@ -5,13 +5,13 @@
 
 def fibonacci(input):
     """
-    Function that calculates fibonacci sequence of a given number
+    Function that calculates the nth Fibonacci number
 
     Args:
-        input (Number): given number to find fibonacci sequence of.
+        input (Number): The index of the Fibonacci number to calculate (non-negative integer).
 
     Returns:
-        [Number] the resulting fibonacci number
+        [Number] The nth Fibonacci number.
     """
     if input <= 2:
         return 1
@@ -20,14 +20,14 @@ def fibonacci(input):
 
 def fibonacciMemoized(input, memo = {}):
     """
-    Memoized function that calculates fibonacci sequence of a given number
+    Memoized function that calculates the nth Fibonacci number
 
     Args:
-        input (Number):    given number to find fibonacci sequence of.
+        input (Number):    The index of the Fibonacci number to calculate (non-negative integer).
         memo (Dictionary): used as a cache to store previously computed values.
 
     Returns:
-        [Number] the resulting fibonacci number
+        [Number] The nth Fibonacci number.
     """
     if input in memo:
         return memo[input]
@@ -37,6 +37,26 @@ def fibonacciMemoized(input, memo = {}):
     memo[input] = fibonacciMemoized(input - 1, memo) + fibonacciMemoized(input - 2, memo)
     
     return memo[input]
+
+def fibonacciTabulated(input):
+    """
+    Tabulated function that calculates the nth Fibonacci number
+
+    Args:
+        input (Number): The index of the Fibonacci number to calculate (non-negative integer).
+
+    Returns:
+        [Number] The nth Fibonacci number.
+    """
+    table = [0] * (input + 1)
+    
+    table[1] = 1
+
+    for i in range(0, input):
+        table[i + 1] += table[i]
+        table[i + 2] += table[i]
+
+    return table[input]
 
 
 # Main Code
@@ -50,13 +70,18 @@ if __name__ == '__main__':
     input6 = 60
     input7 = 70
 
-    print(f"----------------- NON MEMOIZED CODE ----------------- ")
+    print(f"----------------- NON MEMOIZED CODE -----------------")
     print(f'Fibonacci number of {input1} is: [{fibonacci(input1)}]')
     print(f'Fibonacci number of {input2} is: [{fibonacci(input2)}]')
     print(f'Fibonacci number of {input3} is: [{fibonacci(input3)}]')
     print(f'Fibonacci number of {input4} is: [{fibonacci(input4)}]')
 
-    print(f"------------------- MEMOIZED CODE ------------------- ")
+    print(f"------------------- MEMOIZED CODE -------------------")
     print(f'Fibonacci number MEMOIZED of {input5} is: [{fibonacciMemoized(input5)}]')
     print(f'Fibonacci number MEMOIZED of {input6} is: [{fibonacciMemoized(input6)}]')
     print(f'Fibonacci number MEMOIZED of {input7} is: [{fibonacciMemoized(input7)}]')
+
+    print(f"------------------- TABULATED CODE --------------------")
+    print(f'Fibonacci number TABULATED of {input5} is: [{fibonacciMemoized(input5)}]')
+    print(f'Fibonacci number TABULATED of {input6} is: [{fibonacciMemoized(input6)}]')
+    print(f'Fibonacci number TABULATED of {input7} is: [{fibonacciMemoized(input7)}]')
