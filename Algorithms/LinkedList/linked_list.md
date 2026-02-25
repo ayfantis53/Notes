@@ -5,7 +5,7 @@
 ### Parts of a Linked List:
 1. **Node** 
     - container for some data.
-    -  a -> b -> c -> d -> null
+    -  `a -> b -> c -> d -> null`
 2. **Head**
     - First Node of a linked list.
 3. **Tail**
@@ -26,7 +26,7 @@
     - allocating or deallocating memory for nodes during runtime.
 2. **Efficient Insertion and Deletion** 
     - Adding or removing elements, especially at the beginning or end
-    - can be very efficient (O(1) time complexity) 
+    - can be very efficient **(O(1) time complexity)**
         * because it primarily involves updating pointers rather than shifting elements like in an array.
 3. **Sequential Access** 
     - Elements in a linked list cannot be accessed randomly by index. 
@@ -60,13 +60,19 @@
     * affects performance.
 
 ## COMPLILING CODE
-### Steps
-1. `cd <directory_with_file>`
-2.  run code
-    * JavaScript `node <fileName>.js`
-    * Python     `python <fileName>.py`
-    * java       `javac <fileName>.java            && java <fileName>`
-    * cpp        `g++ <fileName>.cpp -o <fileName> && ./<fileName>` 
+```bash
+cd <directory_with_file>
+
+# run code
+    # JavaScript 
+    node <fileName>.js
+    # Python     
+    python <fileName>.py
+    # java       
+    javac <fileName>.java  &&  java <fileName>
+    # cpp        
+    g++ <fileName>.cpp -o <fileName>    &&  ./<fileName>
+``` 
 
 
 ## REFERENCE
