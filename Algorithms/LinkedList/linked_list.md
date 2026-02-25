@@ -47,7 +47,7 @@
 ### Comparison of Linked List vs Arrays
 
 |                    | **Linked-List**               | **Array**                    |
-| :----------------- | :---------------------------: | ----------------------------:|
+| :----------------- | :---------------------------: | :---------------------------:|
 | Data Structure     | Non-contiguous                | Contiguous                   |
 | Memory Allocation  | 1 by 1 to individual elements | allocated to the whole array |
 | Insertion/Deletion | Efficient                     | Inefficient                  |
