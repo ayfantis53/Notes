@@ -8,7 +8,7 @@
 ### Key characteristics of binary trees:
 1. **Nodes**: 
     - Each node typically contains a value or data element, along with pointers (or references) to its left and right children.
-2. **Roo**`: 
+2. **Root**: 
     - The starting point of the tree.
 3. **Children**: 
     - Each node can have zero, one, or two children.
@@ -42,4 +42,4 @@
     - Finding a specific node within the tree.
 
 ## REFERENCE
-- [https://www.youtube.com/watch?v=fAAZixBzIAI&t=6372s]
+- [Binary Tree Algorithms for Technical Interviews](https://www.youtube.com/watch?v=fAAZixBzIAI&t=6372s)

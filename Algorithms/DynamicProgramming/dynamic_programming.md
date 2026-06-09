@@ -40,4 +40,4 @@
 6. Fill further positions based on the current position.
 
 ## REFERENCE
-- [https://www.youtube.com/watch?v=oBt53YbR9Kk]
+- [Learn to Solve Algorithmic Problems & Coding Challenges](https://www.youtube.com/watch?v=oBt53YbR9Kk)
