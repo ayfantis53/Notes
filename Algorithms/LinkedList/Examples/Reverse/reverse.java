@@ -1,12 +1,12 @@
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
     char value;
     Node next;
 
     /**
-     *   constructor to initialize a new node with data.
+     *  Constructor to initialize a new node with data.
      *  @param value data to set Node.
      */
     Node(char value) {
@@ -20,10 +20,10 @@ class Node {
  */
 public class reverse {
     /**
-     * Finds value of node that user chooses
+     * Finds value of node that user chooses.
      * 
      * @param head first Node in LinkedList. 
-     * @return Node of new head
+     * @return [Node] of new head.
      */
     public static Node reverse(Node head) {
 
@@ -41,11 +41,11 @@ public class reverse {
     }
 
     /**
-     * Reverse a linkedlist Recursively
+     * Reverse a linkedlist Recursively.
      * 
      * @param head     first Node in LinkedList. 
      * @param previous previous Node in LinkedList.
-     * @return Node of new head
+     * @return [Node] of new head.
      */
     public static Node reverseRecur(Node head, Node previous) {
         if (head == null) {
@@ -59,10 +59,10 @@ public class reverse {
     }
 
     /**
-     * print out linked list
+     * print out linked list.
      * 
      * @param head first Node in LinkedList.
-     * @return void
+     * @return [void]
      */
     public static void traverse(Node head) {
 

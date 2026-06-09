@@ -1,10 +1,12 @@
-/** ---------------------------------------------
- * 
- * Zipper combine two linked lists
- --------------------------------------------- */
+/**
+ * @file This script handles Zipper combining two linked lists.
+ * @module Algorithms/LinkedList/Examples/Zipper/zipper.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
  /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
@@ -18,11 +20,11 @@ class Node {
 }
 
 /**
- * Zipper combine two linked lists
+ * Zipper combine two linked lists.
  * 
  * @param {Node} head1 first Node in first Linked List.
  * @param {Node} head2 first Node in second Linked List.
- * @returns Node of head1
+ * @returns [Node] of head1.
  */
 const zipper = (head1, head2) => {
 
@@ -52,11 +54,11 @@ const zipper = (head1, head2) => {
 };
 
 /**
- * print out all values of linked list recursively
+ * print out all values of linked list recursively.
  * 
  * @param {Node} head1 first Node in first Linked List.
  * @param {Node} head2 first Node in second Linked List.
- * @returns Node of head1
+ * @returns [Node] of head1.
  */
 const zipperRecur = (head1, head2) => {
     if (!head1 && !head2) { return null; }
@@ -73,10 +75,10 @@ const zipperRecur = (head1, head2) => {
 };
 
 /**
- * print out all values of linked list
+ * Print out all values of linked list.
  * 
  * @param {Node} head first Node in Linked List.
- * @returns void
+ * @returns [void]
  */
 const traverse = (head) => {
     

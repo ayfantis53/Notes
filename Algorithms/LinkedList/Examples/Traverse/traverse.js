@@ -1,10 +1,12 @@
-/** ---------------------------------------------
- * 
- * Traverse a linked list
- --------------------------------------------- */
+/**
+ * @file This script handles traversing a linked list.
+ * @module Algorithms/LinkedList/Examples/Traverse/traverse.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
  /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
@@ -18,10 +20,10 @@ class Node {
 }
 
 /**
- * print out all values of linked list
+ * Print out all values of linked list.
  * 
  * @param {Node} head first Node in Linked List.
- * @returns void
+ * @returns [void]
  */
 const traverse = (head) => {
     
@@ -37,11 +39,11 @@ const traverse = (head) => {
 };
 
 /**
- * print out all values of linked list recursively
+ * Print out all values of linked list recursively
  * 
  * @param {Node} head     first Node in Linked List.
  * @param {String} output output of entire linkedlist.
- * @returns void
+ * @returns [void]
  */
 const traverseRecur = (head, output) => {
     

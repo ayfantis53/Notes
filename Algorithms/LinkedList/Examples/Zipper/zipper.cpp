@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 
-/// @brief Class that defines our Node 
+
+/// @brief Class that defines our Node .
 class Node {
 public:
     /// @brief constructor to initialize a new node with data.
@@ -19,10 +20,10 @@ public:
     Node* next;
 };
 
-/// @brief Zipper combine two linked lists
+/// @brief Zipper combine two linked lists.
 /// @param head1 first Node in first Linked List. 
 /// @param head2 first Node in second Linked List.
-/// @returns Node of head1
+/// @returns [Node] of head1.
 auto zipper(Node* head1, Node* head2) -> Node*
 {
     int count      = 0;
@@ -53,10 +54,10 @@ auto zipper(Node* head1, Node* head2) -> Node*
     return head1;
 }
 
-/// @brief Zipper combine two linked lists
+/// @brief Zipper combine two linked lists.
 /// @param head1 first Node in first Linked List. 
 /// @param head2 first Node in second Linked List.
-/// @returns Node of head1
+/// @returns [Node] of head1.
 auto zipperRecur(Node* head1, Node* head2) -> Node*
 {
     if (!head1 && !head2) { return nullptr; }
@@ -73,7 +74,7 @@ auto zipperRecur(Node* head1, Node* head2) -> Node*
     return head1;
 }
 
-/// @brief print out linked list
+/// @brief print out linked list.
 /// @param head first Node in LinkedList. 
 auto traverse(Node* head) -> void
 {

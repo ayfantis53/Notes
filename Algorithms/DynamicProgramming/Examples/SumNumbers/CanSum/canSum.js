@@ -1,14 +1,16 @@
-/** ---------------------------------------------
- * 
- * Find out if we can sum the target
- --------------------------------------------- */
+/**
+ * @file This script handles finding out if we can sum the target.
+ * @module Algorithms/DynamicProgramming/Examples/SumNumbers/CanSum/canSum.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
 /**
- * Given a target and a list of numbers can we make the sum with the list
+ * Given a target and a list of numbers can we make the sum with the list.
  * 
  * @param {Number} target number we are trying to make a sum of.
  * @param {List} numbers  List of numbers we are using to see if we can sum to target.
- * @returns [bool] if you can sum based on numbers  
+ * @returns [bool] if you can sum based on numbers.
  */
 const canSum = (target, numbers) => {
     if (target === 0) { return true; }
@@ -25,11 +27,11 @@ const canSum = (target, numbers) => {
 }
 
 /**
- * Memoized Given a target and a list of numbers can we make the sum with the list
+ * Memoized Given a target and a list of numbers can we make the sum with the list.
  * 
  * @param {Number} target number we are trying to make a sum of.
  * @param {List} numbers  List of numbers we are using to see if we can sum to target.
- * @returns [bool] if you can sum based on numbers 
+ * @returns [bool] if you can sum based on numbers.
  */
 const canSumMemoized = (target, numbers, memo = []) => {
     if (target in memo) {return memo[target]; }
@@ -49,11 +51,11 @@ const canSumMemoized = (target, numbers, memo = []) => {
 }
 
 /**
- * Tabulated Given a target and a list of numbers can we make the sum with the list
+ * Tabulated Given a target and a list of numbers can we make the sum with the list.
  * O(m * n) time complexity           O(m) Space complexity
  * @param {Number} target number we are trying to make a sum of.
  * @param {List} numbers  List of numbers we are using to see if we can sum to target.
- * @returns [bool] if you can sum based on numbers  
+ * @returns [bool] if you can sum based on numbers.
  */
 const canSumTabulated = (target, numbers) => {
     const table = Array(target + 1).fill(false);

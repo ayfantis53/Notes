@@ -1,14 +1,16 @@
-/** ---------------------------------------------
- * 
- * Find minimum value of a Binary Tree
- --------------------------------------------- */
+/**
+ * @file This script handles finding minimum value of a Binary Tree.
+ * @module Algorithms/Trees/Examples/MaxPath/maxPath.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
  /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
-     * Creates an Instance of Node
+     * Creates an Instance of Node.
      * @param {Number} value data of our Node.
      */
     constructor(value) {
@@ -19,10 +21,10 @@ class Node {
 };
 
 /**
- * Depth First Search find min of a Binary Tree
+ * Depth First Search find min of a Binary Tree.
  * 
  * @param {Node} root first Node in Binary Tree. 
- * @returns void
+ * @returns [void]
  */
 const minDFS = (root) => {
     let min   = Infinity;
@@ -43,10 +45,10 @@ const minDFS = (root) => {
 }
 
 /**
- * Breadth First Search find min of a Binary Tree
+ * Breadth First Search find min of a Binary Tree.
  * 
  * @param {Node} root first Node in Binary Tree. 
- * @returns void
+ * @returns [void]
  */
 const minBFS = (root) => {
     let min   = Infinity;
@@ -67,10 +69,10 @@ const minBFS = (root) => {
 }
 
 /**
- * Depth First Search find min of a Binary Tree recursively
+ * Depth First Search find min of a Binary Tree recursively.
  * 
  * @param {Node} root first Node in Binary Tree. 
- * @returns void
+ * @returns [void]
  */
 const minDFSRecurs = (root, min = 0) => {
     if (!root) { return Infinity; }

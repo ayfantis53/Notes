@@ -1,13 +1,15 @@
-/** ---------------------------------------------
- * 
- * Finds out all ways we can construct a string out of given substrings
- --------------------------------------------- */
+ /**
+ * @file This script handles all ways we can construct a string out of given substrings.
+ * @module Algorithms/DynamicProgramming/Examples/ConstructStrings/AllConstruct/allConstruct.js
+ * @author Ayfantis <ayfantis53>
+ */
 
+ 
 /**
- * Finds out all ways we can construct a string out of given substrings
+ * Finds out all ways we can construct a string out of given substrings.
  * O(n^m * k) time complexity           O(n^m) Space complexity
  * @param {String} target word we are trying to make using substrings.
- * @param {Array} substrs substrings we are testing to create target word
+ * @param {Array} substrs substrings we are testing to create target word.
  * @returns [bool]
  */
 const allConstruct = (target, wordBank) => {
@@ -28,10 +30,10 @@ const allConstruct = (target, wordBank) => {
 } 
 
 /**
- * Memoized Finds out all ways we can construct a string out of given substrings
+ * Memoized Finds out all ways we can construct a string out of given substrings.
  * O(n * m^2) time complexity           O(m^2) Space complexity
  * @param {String} target word we are trying to make using substrings.
- * @param {Array} wordBank substrings we are testing to create target word
+ * @param {Array} wordBank substrings we are testing to create target word.
  * @returns [bool]
  */
 const allConstructMemoized = (target, wordBank, memo = []) => {
@@ -54,10 +56,10 @@ const allConstructMemoized = (target, wordBank, memo = []) => {
 }
 
 /**
- * Tabulated Finds out all ways we can construct a string out of given substrings
+ * Tabulated Finds out all ways we can construct a string out of given substrings.
  * O(n^m) time complexity           O(n^m) Space complexity
  * @param {String} target word we are trying to make using substrings.
- * @param {Array} substrs substrings we are testing to create target word
+ * @param {Array} substrs substrings we are testing to create target word.
  * @returns [bool]
  */
 const allConstructTabulated = (target, wordBank) => {
@@ -84,12 +86,12 @@ const allConstructTabulated = (target, wordBank) => {
 function allConstructTabulation(target, wordBank) {
   const table = Array(target.length + 1)
     .fill(null)
-    .map(() => []); // Initialize with empty arrays
+    .map(() => []); // Initialize with empty arrays.
 
-  table[0] = [[]]; // Base case: one way to construct an empty string
+  table[0] = [[]]; // Base case: one way to construct an empty string.
 
   for (let i = 0; i <= target.length; i++) {
-    if (table[i].length > 0) { // Only proceed if a prefix can be constructed
+    if (table[i].length > 0) { // Only proceed if a prefix can be constructed.
       for (let word of wordBank) {
         if (target.slice(i, i + word.length) === word) {
           const newCombinations = table[i].map(combo => [...combo, word]);

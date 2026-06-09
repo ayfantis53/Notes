@@ -1,10 +1,12 @@
-/** ---------------------------------------------
- * 
- * Sum a linked list
- --------------------------------------------- */
+/**
+ * @file This script handles summing a linked list.
+ * @module Algorithms/LinkedList/Examples/Sum/sum.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
  /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
@@ -18,10 +20,10 @@ class Node {
 }
 
 /**
- * sums all values of linked list
+ * sums all values of linked list.
  * 
  * @param {Node} head first Node in LinkedList.
- * @returns void
+ * @returns [void]
  */
 const sum = (head) => {
     let sum     = 0;
@@ -35,11 +37,11 @@ const sum = (head) => {
 }
 
  /**
- * sums all values of linked list recursively.
+ * Sums all values of linked list recursively.
  * 
- * @param {Node} head  first Node in LinkedList..
+ * @param {Node} head  first Node in LinkedList.
  * @param {Number} sum total value of all nodes added together.
- * @returns void
+ * @returns [void]
  */
 const sumRecur = (head, sum) => {
     if (head === null) { 

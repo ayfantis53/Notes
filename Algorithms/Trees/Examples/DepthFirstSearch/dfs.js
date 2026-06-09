@@ -1,14 +1,16 @@
-/** ---------------------------------------------
- * 
- * Depth First Search of a Binary Tree
- --------------------------------------------- */
+/**
+ * @file This script handles Depth First Search of a Binary Tree.
+ * @module Algorithms/Trees/Examples/DepthFirstSearch/dfs.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
  /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
-     * Creates an Instance of Node
+     * Creates an Instance of Node.
      * @param {String} value data of our Node.
      */
     constructor(value) {
@@ -19,10 +21,10 @@ class Node {
 };
 
 /**
- * Depth First Search of a Binary Tree
+ * Depth First Search of a Binary Tree.
  * 
  * @param {Node} root first Node in Binary Tree. 
- * @returns [array] of all nodes in depth first search order
+ * @returns [array] of all nodes in depth first search order.
  */
 const dfs = (root) => {
     const result = [];
@@ -40,10 +42,10 @@ const dfs = (root) => {
 }
 
 /**
- * Depth First Search of a Binary Tree Recursion
+ * Depth First Search of a Binary Tree Recursion.
  * 
  * @param {Node} root first Node in Binary Tree.
- * @returns [array] of all nodes in depth first search order
+ * @returns [array] of all nodes in depth first search order.
  */
 const dfsRecurs = (root) => {
     if (root === null) { return []; }

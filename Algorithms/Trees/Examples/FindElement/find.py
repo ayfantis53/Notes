@@ -1,28 +1,26 @@
-# ---------------------------------------------
-# 
-#  Depth First Search of a Binary Tree
-# ---------------------------------------------
+"""Depth First Search of a Binary Tree."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """Class that defines our Node."""
 
     def __init__(self, value):
+        """Initialize Node."""
         self.value = value
         self.left  = None
         self.right = None
 
+
 def findDFS(root, target):
-    """
-    Depth First Search of a Binary Tree
+    """Depth First Search of a Binary Tree.
 
     Args:
         root (Node):     first Node in Binary Tree.
         target (String): value to find in Binary Tree.
 
     Returns:
-        [bool] if value was found in tree
+        [bool] if value was found in tree.
     """
-
     nodes = [ root ]
 
     while len(nodes) > 0:
@@ -39,16 +37,16 @@ def findDFS(root, target):
     print(f'[{target}] NOT FOUND in tree!')
     return False
 
+
 def findBFS(root, target):
-    """
-    Breadth First Search of a Binary Tree
+    """Breadth First Search of a Binary Tree.
 
     Args:
         root (Node):     first Node in Binary Tree.
         target (String): value to find in Binary Tree.
 
     Returns:
-        [bool] if value was found in tree
+        [bool] if value was found in tree.
     """
 
     nodes = [ root ]
@@ -69,14 +67,14 @@ def findBFS(root, target):
     
 
 def findDFSRecurs(root, target):
-    """
-    Depth First Search of a Binary Tree Recursion
+    """Depth First Search of a Binary Tree Recursion.
 
-    root (Node):     first Node in Binary Tree.
+    Args:
+        root (Node):     first Node in Binary Tree.
         target (String): value to find in Binary Tree.
     
     Returns:
-        [bool] if value was found in tree
+        [bool] if value was found in tree.
     """
 
     if root == None:
@@ -93,14 +91,21 @@ def findDFSRecurs(root, target):
 
     return False
 
+
 def printResult(isFound, target):
+    """Print result of the code.
+    Args:
+        isFound (bool): result of findDFSRecurs function.
+        target (str):   what we want to find.
+    """
     if isFound == True:
         print(f'[{target}] FOUND in tree!')
     else:
         print(f'[{target}] NOT FOUND in tree!')
 
-# Main Code
-if __name__ == '__main__':
+
+def main():
+    """Depth First Search of a Binary Tree."""
     a = Node('a')
     b = Node('b')
     c = Node('c')
@@ -152,3 +157,8 @@ if __name__ == '__main__':
 #        b   c
 #       / \   \
 #      d   e   f
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

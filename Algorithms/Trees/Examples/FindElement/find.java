@@ -2,8 +2,9 @@ import java.util.Queue;
 import java.util.Stack;
 import java.util.LinkedList;
 
+
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
     char value;
@@ -22,7 +23,7 @@ class Node {
 }
 
 /**
- * Class Find if a value is in a Binary Tree
+ * Class Find if a value is in a Binary Tree.
  */
 public class find {
     /**
@@ -30,7 +31,7 @@ public class find {
      * 
      * @param root   first Node in LinkedList. 
      * @param target value to find in Binary Tree.
-     * @return bool if value was found in tree
+     * @return [bool] if value was found in tree.
      */
     public static boolean findDFS(Node root, char target) {
 
@@ -54,11 +55,11 @@ public class find {
     }
 
     /**
-     * Breadth First Search Find if a value is in a Binary Tree
+     * Breadth First Search Find if a value is in a Binary Tree.
      * 
      * @param root   first Node in Binary Tree.
      * @param target value to find in Binary Tree.
-     * @return bool if value was found in tree
+     * @return [bool] if value was found in tree.
      */
     public static boolean findBFS(Node root, char target) {
 
@@ -82,11 +83,11 @@ public class find {
     }
 
     /**
-     * Depth First Search Find if a value is in a Binary Tree Recursion
+     * Depth First Search Find if a value is in a Binary Tree Recursion.
      * 
      * @param root         first Node in Binary Tree.
      * @param combinedList list of all nodes we visited.
-     * @return bool if value was found in tree
+     * @return [bool] if value was found in tree.
      */
     public static boolean findDFSRecurs(Node root, char target) {
         if (root == null)         { return false; }
@@ -105,11 +106,11 @@ public class find {
     }
 
     /**
-     * Prints the result of our recursive DFS
+     * Prints the result of our recursive DFS.
      * 
      * @param isFound result of recursive call.
      * @param target  what we were loking for.
-     * @returns void
+     * @return [void]
      */
     public static void printResult(boolean isFound, char target) {
         if (isFound) {

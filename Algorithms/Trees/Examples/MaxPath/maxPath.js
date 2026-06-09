@@ -1,14 +1,16 @@
-/** ---------------------------------------------
- * 
- * Find max path of a Binary Tree
- --------------------------------------------- */
+/**
+ * @file This script handles finding max path of a Binary Tree.
+ * @module Algorithms/Trees/Examples/MaxPath/maxPath.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
  /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
-     * Creates an Instance of Node
+     * Creates an Instance of Node.
      * @param {Number} value data of our Node.
      */
     constructor(value) {
@@ -20,7 +22,7 @@ class Node {
 
 
 /**
- * Depth First Search find max path of a Binary Tree
+ * Depth First Search find max path of a Binary Tree.
  * 
  * @param {Node} root first Node in Binary Tree. 
  * @returns [void]
@@ -49,7 +51,7 @@ const maxPathDFS = (root) => {
 }
 
 /**
- * Breadth First Search find max path of a Binary Tree
+ * Breadth First Search find max path of a Binary Tree.
  * 
  * @param {Node} root first Node in Binary Tree. 
  * @returns [void]
@@ -78,10 +80,10 @@ const maxPathBFS = (root) => {
 }
 
 /**
- * Depth First Search find max path of a Binary Tree recursively
+ * Depth First Search find max path of a Binary Tree recursively.
  * 
  * @param {Node} root first Node in Binary Tree. 
- * @returns [Number] the sum of max path of nodes
+ * @returns [Number] the sum of max path of nodes.
  */
 const maxPathDFSRecurs = (root) => {
     if (!root) { return -Infinity; }
@@ -91,8 +93,8 @@ const maxPathDFSRecurs = (root) => {
     return root.value + maxChildPathSum;
 }
 
-
 // Main Code
+
 const a = new Node(5);
 const b = new Node(7);
 const c = new Node(4);

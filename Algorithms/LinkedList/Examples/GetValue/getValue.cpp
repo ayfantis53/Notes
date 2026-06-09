@@ -1,6 +1,7 @@
 #include <iostream>
 
-/// @brief Class that defines our Node 
+
+/// @brief Class that defines our Node .
 class Node {
 public:
     /// @brief constructor to initialize a new node with data.
@@ -18,7 +19,7 @@ public:
     Node* next;
 };
 
-/// @brief Finds value of node that user chooses
+/// @brief Finds value of node that user chooses.
 /// @param head   first Node in LinkedList. 
 /// @param target value to find in LinkedList.
 auto getValue(Node* head, int target) -> void
@@ -40,11 +41,11 @@ auto getValue(Node* head, int target) -> void
     std::cout << "Linked list doesnt have " << target << " Nodes!" << std::endl;
 }
 
-/// @brief Finds value of node that user chooses recursively
+/// @brief Finds value of node that user chooses recursively.
 /// @param head   first Node in LinkedList. 
 /// @param target value to find in LinkedList.
 /// @param count  node iteration we are on.
-/// @returns int -1 for fail 0 for success 
+/// @returns [int] -1 for fail 0 for success.
 auto getValueRecur(Node* head, int target, int count) -> int
 {
     if (head == nullptr)

@@ -1,25 +1,23 @@
-# ---------------------------------------------
-# 
-#  Sum a linked list
-# ---------------------------------------------
+"""Sum a linked list."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """Class that defines our Node."""
 
     def __init__(self, value):
+        """Initialize Node."""
         self.value = value
         self.next  = None
 
 
 def sum(head):
-    """ 
-    sums all values of linked list.
+    """Sums all values of linked list.
 
     Args:
         head (Node): first Node in Linked List.
 
     Returns:
-        void
+        [void]
     """
     sum     = 0
 
@@ -29,16 +27,16 @@ def sum(head):
 
     print(f"The Iterative Sum of the linked list is: {sum}")
 
+
 def sumRecur(head, sum):
-    """ 
-    sums all values of linked list recursively.
+    """Sums all values of linked list recursively.
      
     Args:
         head (Node):  first Node in Linked List.
         sum (Number): total value of all nodes added together.
 
     Returns:
-        float: The sum of all values of Nodes in Linked List.
+        [float] The sum of all values of Nodes in Linked List.
     """
     if head is None:
         print(f"The Iterative Sum of the linked list is: {sum}")
@@ -46,7 +44,9 @@ def sumRecur(head, sum):
     
     return sumRecur(head.next, head.value + sum)
 
-if __name__ == "__main__":
+
+def main():
+    """Sum a linked list."""
     a = Node(2)
     b = Node(4)
     c = Node(6)
@@ -63,3 +63,8 @@ if __name__ == "__main__":
 
     # Recursive function calls.
     sumRecur(a, 0)
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

@@ -2,7 +2,8 @@
 #include <stack>
 #include <vector>
 
-/// @brief Class that defines our Node 
+
+/// @brief Class that defines our Node.
 class Node {
 public:
     /// @brief constructor to initialize a new node with data.
@@ -24,9 +25,9 @@ public:
     Node* right;
 };
 
-/// @brief Depth First Search of a Binary Tree Recursion
+/// @brief Depth First Search of a Binary Tree Recursion.
 /// @param root first Node in Binary Tree. 
-/// @returns [array] of all nodes in depth first search order
+/// @returns [array] of all nodes in depth first search order.
 auto dfs(Node* root) -> std::vector<char>
 {
     std::stack<Node*> nodes;
@@ -47,10 +48,10 @@ auto dfs(Node* root) -> std::vector<char>
     return result;
 }
 
-/// @brief Depth First Search of a Binary Tree Recursion
+/// @brief Depth First Search of a Binary Tree Recursion.
 /// @param root         first Node in Binary Tree. 
 /// @param combinedList list of all nodes we visited.
-/// @returns [array] of all nodes in depth first search order
+/// @returns [array] of all nodes in depth first search order.
 auto dfsRecurs(Node* root, std::vector<char>& combinedList) -> std::vector<char>
 {
     if (!root) { return std::vector<char>(); }
@@ -63,7 +64,7 @@ auto dfsRecurs(Node* root, std::vector<char>& combinedList) -> std::vector<char>
     return combinedList;
 }
 
-/// @brief Prints out a vector
+/// @brief Prints out a vector.
 /// @param list vector of values to print.
 auto printValues(std::vector<char> list) -> void
 {

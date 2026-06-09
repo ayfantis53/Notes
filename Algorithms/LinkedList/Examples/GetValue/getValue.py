@@ -1,27 +1,25 @@
-# ---------------------------------------------
-# 
-#  Find a Node in linked list
-# ---------------------------------------------
+"""Find a Node in linked list."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """Class that defines our Node."""
 
     def __init__(self, value):
+        """Initialize Node."""
         self.value = value
         self.next  = None
 
+
 def getValue(head, target):
-    """
-    Finds value of node that user chooses
+    """Finds value of node that user chooses.
 
     Args:
         head (Node):     first Node in Linked List.
         target (Number): value of Node we want to find.
 
     Returns:
-        void
+        [void]
     """
-
     count = 1
 
     while head != None:
@@ -34,9 +32,9 @@ def getValue(head, target):
 
     print(f'Linked list doesnt have {target} Nodes!')
 
+
 def getValueRecur(head, target, count):
-    """
-    Finds value of node that user chooses
+    """Finds value of node that user chooses.
 
     Args:
         head (Node):     first Node in Linked List.
@@ -44,9 +42,8 @@ def getValueRecur(head, target, count):
         count (Number):  node iteration we are on.
 
     Returns:
-        void
+        [void]
     """
-
     if head == None:
         print(f'Linked list doesnt have {target} Nodes!')
         return
@@ -56,7 +53,9 @@ def getValueRecur(head, target, count):
 
     getValueRecur(head.next, target, count + 1)
 
-if __name__ == '__main__':
+
+def main():
+    """Find a Node in linked list."""
     a = Node('A')
     b = Node('B')
     c = Node('C')
@@ -81,3 +80,8 @@ if __name__ == '__main__':
     getValueRecur(a, 3, 1)
     getValueRecur(a, 4, 1)
     getValueRecur(a, 5, 1)
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

@@ -1,10 +1,12 @@
-/** ---------------------------------------------
- * 
- * Breadth First Search of a Binary Tree
- --------------------------------------------- */
+/**
+ * @file This script handles Breadth First Search of a Binary Tree.
+ * @module Algorithms/Trees/Examples/BreadthFirstSearch/bfs.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
  /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
@@ -19,10 +21,10 @@ class Node {
 };
 
 /**
- * Breadth First Search of a Binary Tree
+ * Breadth First Search of a Binary Tree.
  * 
  * @param {Node} root first Node in Binary Tree. 
- * @returns [array] of all nodes in depth first search order
+ * @returns [array] of all nodes in depth first search order.
  */
 const bfs = (root) => {
     if (!root) { return []; }

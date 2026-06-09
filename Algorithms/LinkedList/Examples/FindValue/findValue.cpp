@@ -1,6 +1,7 @@
 #include <iostream>
 
-/// @brief Class that defines our Node 
+
+/// @brief Class that defines our Node.
 class Node {
 public:
     /// @brief constructor to initialize a new node with data.
@@ -19,7 +20,7 @@ public:
 };
 
 /// @brief Find a value in a LinkedList
-/// @param head   first Node in LinkedList. 
+/// @param head   first Node in LinkedList.
 /// @param target value to find in LinkedList.
 auto findValue(Node* head, char target) -> void
 {
@@ -41,10 +42,10 @@ auto findValue(Node* head, char target) -> void
 }
 
 /// @brief Find a value in a LinkedList recursively.
-/// @param head   first Node in LinkedList. 
+/// @param head   first Node in LinkedList.
 /// @param target value to find in LinkedList.
 /// @param count  node iteration we are on.
-/// @returns int -1 for fail 0 for success 
+/// @returns [int] -1 for fail 0 for success.
 auto findValueRecur(Node* head, char target, int count) -> int
 {
     if (head == nullptr)

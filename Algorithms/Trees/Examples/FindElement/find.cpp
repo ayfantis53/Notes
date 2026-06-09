@@ -3,7 +3,8 @@
 #include <queue>
 #include <vector>
 
-/// @brief Class that defines our Node 
+
+/// @brief Class that defines our Node.
 class Node {
 public:
     /// @brief constructor to initialize a new node with data.
@@ -25,10 +26,10 @@ public:
     Node* right;
 };
 
-/// @brief Depth First Search Find if a value is in a Binary Tree
+/// @brief Depth First Search Find if a value is in a Binary Tree.
 /// @param root   first Node in Binary Tree. 
 /// @param target value to find in Binary Tree. 
-/// @returns [bool] if value was found in tree
+/// @returns [bool] if value was found in tree.
 auto findDFS(Node* root, char target) -> bool
 {
     std::stack<Node*> nodes;
@@ -53,10 +54,10 @@ auto findDFS(Node* root, char target) -> bool
     return false;
 }
 
-/// @brief Breadth First Search Find if a value is in a Binary Tree
+/// @brief Breadth First Search Find if a value is in a Binary Tree.
 /// @param root   first Node in Binary Tree. 
 /// @param target value to find in Binary Tree. 
-/// @returns [bool] if value was found in tree
+/// @returns [bool] if value was found in tree.
 auto findBFS(Node* root, char target) -> bool
 {
     std::queue<Node*> nodes;
@@ -81,10 +82,10 @@ auto findBFS(Node* root, char target) -> bool
     return false;
 }
 
-/// @brief Depth First Search Find if a value is in a Binary Tree Recursion
+/// @brief Depth First Search Find if a value is in a Binary Tree Recursion.
 /// @param root   first Node in Binary Tree. 
 /// @param target value to find in Binary Tree. 
-/// @returns [bool] if value was found in tree
+/// @returns [bool] if value was found in tree.
 auto findDFSRecurs(Node* root, char target) -> bool
 {
    if (!root)                 { return false; }
@@ -99,10 +100,10 @@ auto findDFSRecurs(Node* root, char target) -> bool
    return false;
 }
 
-/// @brief Prints the result of our recursive DFS
+/// @brief Prints the result of our recursive DFS.
 /// @param isFound result of recursive call.
 /// @param target  what we were loking for.
-/// @returns void
+/// @returns [void]
 auto printResult(bool isFound, char target) -> void 
 {
     if (isFound) 

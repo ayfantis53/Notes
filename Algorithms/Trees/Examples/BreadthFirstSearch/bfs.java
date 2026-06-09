@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 
+
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
     char value;
@@ -14,7 +15,7 @@ class Node {
     Node right;
 
     /**
-     *   constructor to initialize a new node with data.
+     *  Constructor to initialize a new node with data.
      *  @param value data to set Node.
      */
     Node (char value) {
@@ -25,14 +26,14 @@ class Node {
 }
 
 /**
- * Class that Depth First Search of a Binary Tree
+ * Class that Depth First Search of a Binary Tree.
  */
 public class bfs {
     /**
-     * Depth First Search of a Binary Tree
+     * Depth First Search of a Binary Tree.
      * 
      * @param root first Node in Binary Tree.
-     * @return [array] of all nodes in depth first search order
+     * @return [array] of all nodes in depth first search order.
      */
     public static List<Character> bfs(Node root) {
 

@@ -1,28 +1,25 @@
-# ---------------------------------------------
-# 
-#  Zipper combine two linked lists
-# ---------------------------------------------
+"""Zipper combine two linked lists."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """Class that defines our Node."""
 
     def __init__(self, value):
+        """Initialize Node."""
         self.value = value
         self.next  = None
 
 
 def zipper(head1, head2):
-    """ 
-    Zipper combine two linked lists
+    """Zipper combine two linked lists.
 
     Args:
         head1 (Node): first Node in first Linked List.
         head2 (Node): first Node in second Linked List.
 
     Returns:
-        Node of head1
+        [Node] of head1.
     """
-
     count    = 0 
     tail     = head1
     current1 = head1.next
@@ -48,15 +45,14 @@ def zipper(head1, head2):
 
 
 def zipperRecur(head1, head2):
-    """ 
-    Zipper combine two linked lists recursively
+    """Zipper combine two linked lists recursively.
 
     Args:
         head1 (Node): first Node in first Linked List.
         head2 (Node): first Node in second Linked List.
 
     Returns:
-        Node of head1
+        [Node] of head1.
     """
 
     if not head1 and not head2:
@@ -76,14 +72,13 @@ def zipperRecur(head1, head2):
 
 
 def traverse(head):
-    """ 
-    print out linked list 
+    """Print out linked list.
 
     Args:
         head (Node): first Node in Linked List.
 
     Returns:
-        void
+        [void]
     """
     output = ""
 
@@ -93,8 +88,9 @@ def traverse(head):
 
     print(f'{output}null')
 
-if __name__ == "__main__":
 
+def main():
+    """Zipper combine two linked lists."""
     a = Node('A')
     c = Node('C')
     e = Node('E')
@@ -131,3 +127,8 @@ if __name__ == "__main__":
     # Recursive function calls.
     zipperRecur(a, b)
     traverse(a)
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

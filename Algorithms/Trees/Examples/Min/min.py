@@ -1,20 +1,18 @@
-# ---------------------------------------------
-# 
-#  Find minimum value of a Binary Tree
-# ---------------------------------------------
+"""Find minimum value of a Binary Tree."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """Class that defines our Node."""
 
     def __init__(self, value):
+        """Initialize Node."""
         self.value = value
         self.left  = None
         self.right = None
 
 
 def minDFS(root):
-    """
-    Depth First Search find min of a Binary Tree
+    """Depth First Search find min of a Binary Tree.
 
     Args:
         root(Node): first Node in Binary Tree.
@@ -40,8 +38,7 @@ def minDFS(root):
 
 
 def minBFS(root):
-    """
-    Breadth First Search find min of a Binary Tree
+    """Breadth First Search find min of a Binary Tree.
 
     Args:
         root(Node): first Node in Binary Tree.
@@ -66,14 +63,13 @@ def minBFS(root):
     return
 
 def minDFSRecurs(root):
-    """
-    Depth First Search find min of a Binary Tree recursively
+    """Depth First Search find min of a Binary Tree recursively.
 
     Args:
         root(Node): first Node in Binary Tree.
 
     Returns:
-        [Number] returns smallest number in tree 
+        [Number] returns smallest number in tree.
     """
     if root == None:
         return float('inf')
@@ -83,8 +79,9 @@ def minDFSRecurs(root):
 
     return min(root.value, rightMin, leftMin)
 
-# Main Code
-if __name__ == '__main__':
+
+def main():
+    """Find minimum value of a Binary Tree."""
     a = Node(5)
     b = Node(7)
     c = Node(4)
@@ -118,3 +115,8 @@ if __name__ == '__main__':
     #        7   4
     #       / \   \
     #      8   3   9
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

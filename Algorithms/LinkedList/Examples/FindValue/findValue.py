@@ -1,27 +1,24 @@
-# ---------------------------------------------
-# 
-#  Find a Node in linked list
-# ---------------------------------------------
+"""Find a Node in linked list."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """ Class that defines our Node."""
 
     def __init__ (self, value):
         self.value = value
         self.next  = None
 
+
 def findValue(head, target):
-    """
-    Find a value in a LinkedList
+    """Find a value in a LinkedList.
 
     Args:
         head (Node):     first Node in Linked List.
         target (String): value of Node we want to find.
 
     Returns:
-        void
+        [void]
     """
-
     count = 1
 
     while head is not None:
@@ -33,9 +30,9 @@ def findValue(head, target):
 
     print(f'No Value of {target} found in linked list')
 
+
 def findValueRecur(head, target, count):
-    """
-    Find a value in a LinkedList Recursively
+    """Find a value in a LinkedList Recursively.
 
     Args:
         head (Node):     first Node in Linked List.
@@ -43,9 +40,8 @@ def findValueRecur(head, target, count):
         count (Number):  node iteration we are on.
     
     Returns:
-        void
+        [void]
     """
-
     if head == None:
         print(f'No Value of {target} found in linked list')
         return
@@ -54,8 +50,9 @@ def findValueRecur(head, target, count):
         return 
     return findValueRecur(head.next, target, count + 1)
 
-# Main Code
-if __name__ == '__main__':
+
+def main():
+    """Find a Node in linked list."""
     a = Node('A')
     b = Node('B')
     c = Node('C')
@@ -80,3 +77,8 @@ if __name__ == '__main__':
     findValueRecur(a, 'C', 1)
     findValueRecur(a, 'D', 1)
     findValueRecur(a, 'E', 1)
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

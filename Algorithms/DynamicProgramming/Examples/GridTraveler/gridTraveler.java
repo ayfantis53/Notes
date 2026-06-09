@@ -1,16 +1,16 @@
 import java.util.HashMap;
 
-/** ---------------------------------------------
- * 
- * Memoize a Grid Traveler function
- --------------------------------------------- */
+ 
+/**
+ * Class that defines Memoizing a Grid Traveler function.
+ */
 class gridTraveler {
     /**
-     * Function that calculates the shortest path in a gird traveler
+     * Function that calculates the shortest path in a gird traveler.
      * 
      * @param x size of grid we will be traveling in.
      * @param y size of grid we will be traveling in.
-     * @returns [int] the amount of ways we can travel grid
+     * @return  [int] the amount of ways we can travel grid.
      */
     public static int gridTraveler(int x, int y) {
         if (x == 1 && y == 1) { return 1; }
@@ -22,10 +22,10 @@ class gridTraveler {
     /**
      * Memoized function that calculates gridTraveler sequence of a given number
      * 
-     * @param x size of grid we will be traveling in.
-     * @param y size of grid we will be traveling in.
+     * @param x    size of grid we will be traveling in.
+     * @param y    size of grid we will be traveling in.
      * @param memo used as a cache to store previously computed values.
-     * @returns [Long] the resulting gridTraveler number
+     * @return [Long] the resulting gridTraveler number.
      */
     public static long gridTravelerMemoized (int x, int y, HashMap<String, Long> memo) {
         String key = x + "," + y;

@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 
+
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
     int value;
@@ -14,7 +15,7 @@ class Node {
     Node right;
 
     /**
-     *   constructor to initialize a new node with data.
+     *  Constructor to initialize a new node with data.
      *  @param value data to set Node.
      */
     Node (int value) {
@@ -25,11 +26,11 @@ class Node {
 }
 
 /**
- * Class that Finds minimum value of a Binary Tree
+ * Class that Finds minimum value of a Binary Tree.
  */
 public class min {
     /**
-     * Depth First Search find min of a Binary Tree
+     * Depth First Search find min of a Binary Tree.
      * 
      * @param root first Node in Binary Tree. 
      * @return [void]
@@ -55,7 +56,7 @@ public class min {
     }
 
     /**
-     * Breadth First Search find min of a Binary Tree
+     * Breadth First Search find min of a Binary Tree.
      * 
      * @param root first Node in Binary Tree. 
      * @return [void]
@@ -81,7 +82,7 @@ public class min {
     }
 
     /**
-     * Depth First Search find min of a Binary Tree Recursively
+     * Depth First Search find min of a Binary Tree Recursively.
      * 
      * @param root first Node in Binary Tree. 
      * @return [void]

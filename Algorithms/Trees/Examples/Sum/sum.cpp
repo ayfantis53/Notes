@@ -3,7 +3,8 @@
 #include <queue>
 #include <vector>
 
-/// @brief Class that defines our Node 
+
+/// @brief Class that defines our Node.
 class Node 
 {
 public:
@@ -26,7 +27,7 @@ public:
     Node* right;
 };
 
-/// @brief Depth First Search Sum all values of a Binary Tree
+/// @brief Depth First Search Sum all values of a Binary Tree.
 /// @param root   first Node in Binary Tree.  
 /// @returns [void]
 auto sumDFS(Node* root) -> void 
@@ -50,7 +51,7 @@ auto sumDFS(Node* root) -> void
     return;
 }
 
-/// @brief Breadth First Search Sum all values of a Binary Tree
+/// @brief Breadth First Search Sum all values of a Binary Tree.
 /// @param root   first Node in Binary Tree.  
 /// @returns [void]
 auto sumBFS(Node* root) -> void 
@@ -74,7 +75,7 @@ auto sumBFS(Node* root) -> void
     return;
 }
 
-/// @brief Depth First Search Sum all values of a Binary Tree recursively
+/// @brief Depth First Search Sum all values of a Binary Tree recursively.
 /// @param root   first Node in Binary Tree.  
 /// @returns [void]
 auto sumDFSRecurs(Node* root) -> int 

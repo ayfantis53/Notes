@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 
-/// @brief Class that defines our Node 
+
+/// @brief Class that defines our Node .
 class Node {
 public:
     /// @brief constructor to initialize a new node with data.
@@ -19,7 +20,7 @@ public:
     Node* next;
 };
 
-/// @brief print out linked list
+/// @brief print out linked list.
 /// @param head first Node in LinkedList. 
 auto traverse(Node* head) -> void
 {
@@ -34,10 +35,10 @@ auto traverse(Node* head) -> void
     std::cout << output << "null" << std::endl;
 }
 
-/// @brief print out linked list recursively
+/// @brief print out linked list recursively.
 /// @param head first Node in LinkedList. 
 /// @param output output of entire linkedlist.
-/// @returns int 1 for success
+/// @returns [int] 1 for success.
 auto traverseRecur(Node* head, std::string output) -> int
 {
     if (head == nullptr)

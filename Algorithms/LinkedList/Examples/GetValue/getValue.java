@@ -1,12 +1,12 @@
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
     char value;
     Node next;
 
     /**
-     *   constructor to initialize a new node with data.
+     *  Constructor to initialize a new node with data.
      *  @param value data to set Node.
      */
     Node(char value) {
@@ -16,15 +16,15 @@ class Node {
 }
 
 /**
- * Class that Finds value of node that user chooses
+ * Class that Finds value of node that user chooses.
  */
 public class getValue {
     /**
-     * Finds value of node that user chooses
+     * Finds value of node that user chooses.
      * 
      * @param head   first Node in LinkedList. 
      * @param target value to find in LinkedList.
-     * @return void
+     * @return [void]
      */
     public static void getValue(Node head, int target) {
 
@@ -44,12 +44,12 @@ public class getValue {
     }
 
     /**
-     * Finds value of node that user chooses recursively
+     * Finds value of node that user chooses recursively.
      * 
      * @param head   first Node in LinkedList. 
      * @param target value to find in LinkedList.
      * @param count  node iteration we are on.
-     * @return int -1 for fail 0 for success
+     * @return [int] -1 for fail 0 for success.
      */
     public static int getValueRecur(Node head, int target, int count) {
         if (head == null) {

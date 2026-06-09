@@ -1,14 +1,16 @@
-/** ---------------------------------------------
- * 
- * Memoize a Grid Traveler function
- --------------------------------------------- */
+/**
+ * @file This script handles memoizing a Grid Traveler function.
+ * @module Algorithms/DynamicProgramming/Examples/GridTraveler/gridTraveler.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
 /**
- * Function that calculates the shortest path in a gird traveler
+ * Function that calculates the shortest path in a gird traveler.
  * 
  * @param {Number} x size of grid we will be traveling in.
  * @param {Number} y size of grid we will be traveling in.
- * @returns [Number] the amount of ways we can travel grid
+ * @returns [Number] the amount of ways we can travel grid.
  */
 const gridTraveler = (x, y) => {
     if (x === 1 && y === 1) { return 1; }
@@ -18,12 +20,12 @@ const gridTraveler = (x, y) => {
 }
 
 /**
- * Memoized function that calculates gridTraveler sequence of a given number
+ * Memoized function that calculates gridTraveler sequence of a given number.
  * 
  * @param {Number} x size of grid we will be traveling in.
  * @param {Number} y size of grid we will be traveling in.
  * @param {Object} memo used as a cache to store previously computed values.
- * @returns [Number] the resulting gridTraveler number
+ * @returns [Number] the resulting gridTraveler number.
  */
 const gridTravelerMemoized = (x, y, memo = {}) => {
     const key = x + ',' + y;
@@ -37,11 +39,11 @@ const gridTravelerMemoized = (x, y, memo = {}) => {
 }
 
 /**
- * Tabulated Function that calculates the shortest path in a gird traveler
+ * Tabulated Function that calculates the shortest path in a gird traveler.
  * O(n) time complexity           O(n) Space complexity
  * @param {Number} x size of grid we will be traveling in.
  * @param {Number} y size of grid we will be traveling in.
- * @returns [Number] the amount of ways we can travel grid
+ * @returns [Number] the amount of ways we can travel grid.
  */
 const gridTravelerTabulated = (x, y) => {
     const table = Array(x + 1)

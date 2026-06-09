@@ -1,14 +1,16 @@
-/** ---------------------------------------------
- * 
- * Find out how we can sum the target
- --------------------------------------------- */
+/**
+ * @file This script handles finding out how we can sum the target.
+ * @module Algorithms/DynamicProgramming/Examples/SumNumbers/HowSum/howSum.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
 /**
- * Given a target and a list of numbers how can we make the sum with the list
+ * Given a target and a list of numbers how can we make the sum with the list.
  * 
  * @param {Number} target number we are trying to make a sum of.
  * @param {List} numbers  List of numbers we are using to see if we can sum to target.
- * @returns [Array] if you can sum based on numbers  
+ * @returns [Array] if you can sum based on numbers. 
  */
 const howSum = (target, numbers) => {
     if (target === 0) { return []; }
@@ -26,11 +28,11 @@ const howSum = (target, numbers) => {
 }
 
 /**
- * Memoized Given a target and a list of numbers can we make the sum with the list
+ * Memoized Given a target and a list of numbers can we make the sum with the list.
  * 
  * @param {Number} target number we are trying to make a sum of.
  * @param {List} numbers  List of numbers we are using to see if we can sum to target.
- * @returns [Array] if you can sum based on numbers 
+ * @returns [Array] if you can sum based on numbers.
  */
 const howSumMemoized = (target, numbers, memo = []) => {
     if (target in memo) { return memo[target]; }
@@ -51,11 +53,11 @@ const howSumMemoized = (target, numbers, memo = []) => {
 }
 
 /**
- * Tabulated Given a target and a list of numbers can we make the sum with the list
+ * Tabulated Given a target and a list of numbers can we make the sum with the list.
  * O(m^2 * n) time complexity           O(m^2) Space complexity
  * @param {Number} target number we are trying to make a sum of.
  * @param {List} numbers  List of numbers we are using to see if we can sum to target.
- * @returns [Array] if you can sum based on numbers 
+ * @returns [Array] if you can sum based on numbers. 
  */
 const howSumTabulated = (target, numbers) => {
     const table = Array(target + 1).fill(null);

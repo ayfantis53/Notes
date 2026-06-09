@@ -1,12 +1,12 @@
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
     int value;
     Node next;
 
     /**
-     *   constructor to initialize a new node with data.
+     *  Constructor to initialize a new node with data.
      *  @param value data to set Node.
      */
     Node (int value) {
@@ -17,10 +17,10 @@ class Node {
 
 public class sum {
     /**
-     * sums all values of linked list
+     * Sums all values of linked list.
      * 
      * @param head first Node in LinkedList. 
-     * @return void
+     * @return [void]
      */
     public static void sum(Node head) {
         int sum = 0;
@@ -34,11 +34,11 @@ public class sum {
     }
 
     /**
-     * sums all values of linked list Recursively
+     * Sums all values of linked list Recursively.
      * 
      * @param head first Node in LinkedList. 
      * @param sum  total value of all nodes added together.
-     * @return int 0 for success
+     * @return [int] 0 for success
      */
     public static int sumRecur(Node head, int sum) {
         if (head == null) {

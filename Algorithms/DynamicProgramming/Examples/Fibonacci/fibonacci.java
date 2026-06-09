@@ -1,13 +1,12 @@
-
 import java.util.HashMap;
 
 
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 public class fibonacci {
     /**
-     * Function that calculates the nth Fibonacci number
+     * Function that calculates the nth Fibonacci number.
      * 
      * @param input input The index of the Fibonacci number to calculate (non-negative integer).
      * @return [Long] The nth Fibonacci number.
@@ -19,7 +18,7 @@ public class fibonacci {
     }
 
     /**
-     * Memoized function that calculates the nth Fibonacci number
+     * Memoized function that calculates the nth Fibonacci number.
      * 
      * @param input input The index of the Fibonacci number to calculate (non-negative integer).
      * @param memo  used as a cache to store previously computed values.

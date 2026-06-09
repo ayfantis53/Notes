@@ -2,7 +2,8 @@
 #include <queue>
 #include <vector>
 
-/// @brief Class that defines our Node 
+
+/// @brief Class that defines our Node.
 class Node {
 public:
     /// @brief constructor to initialize a new node with data.
@@ -24,9 +25,9 @@ public:
     Node* right;
 };
 
-/// @brief Breadth First Search of a Binary Tree
+/// @brief Breadth First Search of a Binary Tree.
 /// @param root  first Node in Binary Tree. 
-/// @returns [array] of all nodes in depth first search order
+/// @returns [array] of all nodes in depth first search order.
 auto bfs(Node* root) -> std::vector<char>
 {
     std::queue<Node*> nodes;
@@ -47,7 +48,7 @@ auto bfs(Node* root) -> std::vector<char>
     return result;
 }
 
-/// @brief Prints out a vector
+/// @brief Prints out a vector.
 /// @param list vector of values to print.
 auto printValues(std::vector<char> list) -> void
 {

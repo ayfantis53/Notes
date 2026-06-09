@@ -1,18 +1,15 @@
-# ---------------------------------------------
-# 
-#  Memoize a Grid Traveler function
-# ---------------------------------------------
+"""Memoize a Grid Traveler function."""
+
 
 def gridTraveler(x, y):
-    """
-    Function that calculates the shortest path in a gird traveler
+    """Function that calculates the shortest path in a gird traveler.
 
     Args:
         x (Number): size of grid we will be traveling in.
         y (Number): size of grid we will be traveling in.
 
     Returns:
-        [Number] the amount of ways we can travel grid
+        [Number] the amount of ways we can travel grid.
     """
     if x == 1 and y == 1:
         return 1
@@ -23,8 +20,7 @@ def gridTraveler(x, y):
 
 
 def gridTravelerMemoized(x, y, memo = {}):
-    """
-    Memoized function that calculates gridTraveler sequence of a given number
+    """Memoized function that calculates gridTraveler sequence of a given number.
 
     Args:
         x (Number): size of grid we will be traveling in.
@@ -32,7 +28,7 @@ def gridTravelerMemoized(x, y, memo = {}):
         memo (Object):  used as a cache to store previously computed values.
 
     Returns: 
-        [Number] the resulting gridTraveler number
+        [Number] the resulting gridTraveler number.
     """
     key = str(x) + "," + str(y)
 
@@ -47,8 +43,8 @@ def gridTravelerMemoized(x, y, memo = {}):
     return memo[key]
 
 
-# Main Code
-if __name__ == '__main__':
+def main():
+    """Memoize a Grid Traveler function."""
     print(f'------------------ NON MEMOIZED CODE ------------------')
     print(f'Amount of paths for {1, 1} is: [{gridTraveler(1, 1)}]')
     print(f'Amount of paths for {2, 3} is: [{gridTraveler(2, 3)}]')
@@ -57,4 +53,9 @@ if __name__ == '__main__':
 
     print(f'-------------------- MEMOIZED CODE -------------------- ')
     print(f'MEMOIZED Amount of paths for {18, 18} is: [{gridTravelerMemoized(18, 18)}]')
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()
 

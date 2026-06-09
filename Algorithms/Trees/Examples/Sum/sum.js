@@ -1,10 +1,12 @@
-/** ---------------------------------------------
- * 
- * Sum all values of a Binary Tree
- --------------------------------------------- */
+/**
+ * @file This script handles finding minimum value of a Binary Tree.
+ * @module Algorithms/Trees/Examples/Sum/sum.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
 /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
@@ -19,7 +21,7 @@ class Node {
 };
 
 /**
- * Depth First Search Sum all values of a Binary Tree
+ * Depth First Search Sum all values of a Binary Tree.
  * 
  * @param {Node} root first Node in Binary Tree. 
  * @returns void
@@ -41,7 +43,7 @@ const sumDFS = (root) => {
 }
 
 /**
- * Breadth First Search Sum all values of a Binary Tree
+ * Breadth First Search Sum all values of a Binary Tree.
  * 
  * @param {Node} root first Node in Binary Tree. 
  * @returns void
@@ -63,7 +65,7 @@ const sumBFS = (root) => {
 }
 
 /**
- * Depth First Search Sum all values of a Binary Tree recursively
+ * Depth First Search Sum all values of a Binary Tree recursively.
  * 
  * @param {Node} root first Node in Binary Tree. 
  * @returns [Number] of sum

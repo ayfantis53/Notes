@@ -1,10 +1,11 @@
-/** ---------------------------------------------
- * 
- * Memoize a Fibonacci sequence function
- --------------------------------------------- */
+/**
+ * @file This script handles memoizing a Fibonacci sequence function.
+ * @module Algorithms/DynamicProgramming/Examples/Fibonacci/fibonacci.js
+ * @author Ayfantis <ayfantis53>
+ */
 
 /**
- * Function that calculates the nth Fibonacci number
+ * Function that calculates the nth Fibonacci number.
  * 
  * @param {Number} input The index of the Fibonacci number to calculate (non-negative integer).
  * @returns [Number] The nth Fibonacci number.
@@ -16,7 +17,7 @@ const fibonacci = (input) => {
 }
 
 /**
- * Memoized function that calculates the nth Fibonacci number
+ * Memoized function that calculates the nth Fibonacci number.
  * 
  * @param {Number} input The index of the Fibonacci number to calculate (non-negative integer).
  * @param {Object} memo used as a cache to store previously computed values.
@@ -32,7 +33,7 @@ const fibonacciMemoized = (input, memo = {}) => {
 }
 
 /**
- * Tabulated function that calculates the nth Fibonacci number
+ * Tabulated function that calculates the nth Fibonacci number.
  * O(n) time complexity           O(n) Space complexity
  * @param {Number} input The index of the Fibonacci number to calculate (non-negative integer).
  * @returns [Number] The nth Fibonacci number.

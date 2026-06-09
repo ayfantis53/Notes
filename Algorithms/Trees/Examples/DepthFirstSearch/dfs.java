@@ -3,8 +3,9 @@ import java.util.Stack;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
     char value;
@@ -23,11 +24,11 @@ class Node {
 }
 
 /**
- * Class that Depth First Search of a Binary Tree
+ * Class that Depth First Search of a Binary Tree.
  */
 public class dfs {
     /**
-     * Depth First Search of a Binary Tree
+     * Depth First Search of a Binary Tree.
      * 
      * @param root first Node in Binary Tree.
      * @return [array] of all nodes in depth first search order
@@ -51,11 +52,11 @@ public class dfs {
     }
 
     /**
-     * Depth First Search of a Binary Tree Recursion
+     * Depth First Search of a Binary Tree Recursion.
      * 
      * @param root         first Node in Binary Tree.
      * @param combinedList list of all nodes we visited.
-     * @return [array] of all nodes in depth first search order
+     * @return [array] of all nodes in depth first search order.
      */
     public static List<Character> dfsRecurs(Node root, List<Character> combinedList) {
         if (root == null) { return Collections.emptyList(); }
@@ -72,7 +73,7 @@ public class dfs {
      * This is the main method, the entry point for any standalone Java application.
      * The Java Virtual Machine (JVM) looks for this specific method to start program execution.
      *
-     * @param args An array of String objects that can receive command-line arguments
+     * @param args An array of String objects that can receive command-line arguments.
      *             passed to the program when it is executed.
      */
     public static void main(String[] args) {

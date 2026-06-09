@@ -1,25 +1,23 @@
-# ---------------------------------------------
-# 
-#  Depth First Search of a Binary Tree
-# ---------------------------------------------
+"""Depth First Search of a Binary Tree."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """Class that defines our Node."""
 
     def __init__(self, value):
+        """Initialize Node."""
         self.value = value
         self.left  = None
         self.right = None
 
 def dfs(root):
-    """
-    Depth First Search of a Binary Tree
+    """Depth First Search of a Binary Tree.
 
     Args:
         root (Node): first Node in Binary Tree.
 
     Returns:
-        [array] of all nodes in depth first search order
+        [array] of all nodes in depth first search order.
     """
 
     result = []
@@ -38,16 +36,14 @@ def dfs(root):
     
 
 def dfsRecurs(root):
-    """
-    Depth First Search of a Binary Tree Recursion
+    """Depth First Search of a Binary Tree Recursion.
 
     Args:
         root (Node): first Node in Binary Tree.
     
     Returns:
-        [array] of all nodes in depth first search order
+        [array] of all nodes in depth first search order.
     """
-
     if root == None:
         return []
     
@@ -57,8 +53,9 @@ def dfsRecurs(root):
     result = [root.value] + leftValues + rightValues
     return result
 
-# Main Code
-if __name__ == '__main__':
+
+def main():
+    """Depth First Search of a Binary Tree."""
     a = Node('a')
     b = Node('b')
     c = Node('c')
@@ -88,3 +85,8 @@ if __name__ == '__main__':
 #        b   c
 #       / \   \
 #      d   e   f
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

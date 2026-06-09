@@ -1,20 +1,18 @@
-# ---------------------------------------------
-# 
-#  Sum all values of a Binary Tree
-# ---------------------------------------------
+"""Sum all values of a Binary Tree."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """Class that defines our Node."""
 
     def __init__(self, value):
+        """Initialize Node."""
         self.value = value
         self.left  = None
         self.right = None
 
 
 def sumDFS(root):
-    """
-    Depth First Search Sum all values of a Binary Tree
+    """Depth First Search Sum all values of a Binary Tree.
 
     Args:
         root (Node): first Node in Binary Tree.
@@ -38,8 +36,7 @@ def sumDFS(root):
     return
 
 def sumBFS(root):
-    """
-    Breadth First Search Sum all values of a Binary Tree
+    """Breadth First Search Sum all values of a Binary Tree.
 
     Args:
         root (Node): first Node in Binary Tree.
@@ -63,8 +60,7 @@ def sumBFS(root):
     return
 
 def sumDFSRecurs(root):
-    """
-    Depth First Search Sum all values of a Binary Tree recursively
+    """Depth First Search Sum all values of a Binary Tree recursively.
 
     Args:
         root (Node): first Node in Binary Tree.
@@ -72,14 +68,14 @@ def sumDFSRecurs(root):
     Returns:
         [void]
     """
-
     if root == None:
         return 0
     
     return root.value + sumDFSRecurs(root.left) + sumDFSRecurs(root.right)
 
-# Main Code
-if __name__ == '__main__':
+
+def main():
+    """Sum all values of a Binary Tree."""
     a = Node(1)
     b = Node(2)
     c = Node(3)
@@ -113,3 +109,8 @@ if __name__ == '__main__':
     #        2   3
     #       / \   \
     #      4   5   6
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

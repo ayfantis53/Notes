@@ -4,7 +4,7 @@
 
 std::unordered_map<int, long long> memo;
 
-/// @brief Function that calculates the nth Fibonacci number
+/// @brief Function that calculates the nth Fibonacci number.
 /// @param input The index of the Fibonacci number to calculate (non-negative integer).
 /// @return [Long] The nth Fibonacci number.
 auto fibonacci(int input) -> long long
@@ -14,7 +14,7 @@ auto fibonacci(int input) -> long long
     return fibonacci(input - 1) + fibonacci(input - 2); 
 }
 
-/// @brief Function that calculates the nth Fibonacci number
+/// @brief Function that calculates the nth Fibonacci number.
 /// @param input The index of the Fibonacci number to calculate (non-negative integer).
 /// @param memo  used as a cache to store previously computed values.
 /// @return [Long] The nth Fibonacci number.

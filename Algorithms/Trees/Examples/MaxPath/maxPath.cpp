@@ -5,7 +5,7 @@
 #include <algorithm>
 
 
-/// @brief Class that defines our Node 
+/// @brief Class that defines our Node.
 class Node 
 {
 public:
@@ -28,7 +28,7 @@ public:
     Node* right;
 };
 
-/// @brief Depth First Search find max path of a Binary Tree
+/// @brief Depth First Search find max path of a Binary Tree.
 /// @param root first Node in Binary Tree. 
 /// @return [void]
 auto maxPathDFS(Node* root) -> void 
@@ -61,7 +61,7 @@ auto maxPathDFS(Node* root) -> void
     return;
 }
 
-/// @brief Breadth First Search find max path of a Binary Tree
+/// @brief Breadth First Search find max path of a Binary Tree.
 /// @param root first Node in Binary Tree. 
 /// @return [void]
 auto maxPathBFS(Node* root) -> void 
@@ -94,9 +94,9 @@ auto maxPathBFS(Node* root) -> void
     return;
 }
 
-/// @brief Depth First Search find max path of a Binary Tree recursively
+/// @brief Depth First Search find max path of a Binary Tree recursively.
 /// @param root first Node in Binary Tree. 
-/// @return [Int] the sum of max path of nodes
+/// @return [Int] the sum of max path of nodes.
 auto maxPathDFSRecurs(Node* root) -> int
 {
     if (!root) { return std::numeric_limits<int>::min(); }

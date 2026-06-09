@@ -1,27 +1,24 @@
-# ---------------------------------------------
-# 
-#  Breadth First Search of a Binary Tree
-# ---------------------------------------------
+"""Breadth First Search of a Binary Tree."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """Class that defines our Node."""
 
     def __init__(self, value):
+        """Initialize Node."""
         self.value = value
         self.left  = None
         self.right = None
 
 def bfs(root):
-    """
-    Breadth First Search of a Binary Tree
+    """Breadth First Search of a Binary Tree.
 
     Args:
         root (Node): first Node in Binary Tree.
 
     Returns:
-        [array] of all nodes in depth first search order
+        [array] of all nodes in depth first search order.
     """
-
     result = []
     nodes = [ root ]
 

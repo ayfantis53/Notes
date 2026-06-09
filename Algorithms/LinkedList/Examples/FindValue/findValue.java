@@ -1,12 +1,12 @@
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
     char value;
     Node next;
 
     /**
-     *   constructor to initialize a new node with data.
+     *  Constructor to initialize a new node with data.
      *  @param value data to set Node.
      */
     Node (char value) {
@@ -16,15 +16,15 @@ class Node {
 }
 
 /**
- * Class that Find a Node in linked list
+ * Class that Find a Node in linked list.
  */
 public class findValue {
     /**
-     * Find a value in a LinkedList
+     * Find a value in a LinkedList.
      * 
-     * @param head   first Node in LinkedList. 
+     * @param head   first Node in LinkedList.
      * @param target value to find in LinkedList.
-     * @return void
+     * @return [void]
      */
     public static void findValue(Node head, char target) {
         int count = 1;
@@ -43,12 +43,12 @@ public class findValue {
     }
 
     /**
-     * Find a value in a LinkedList Recursively
+     * Find a value in a LinkedList Recursively.
      * 
      * @param head   first Node in LinkedList. 
      * @param target value to find in LinkedList.
      * @param count  node iteration we are on.
-     * @return int -1 for fail 0 for success
+     * @return [int] -1 for fail 0 for success.
      */
     public static int findValueRecur(Node head, char target, int count) {
         if (head == null) {
@@ -67,7 +67,7 @@ public class findValue {
      * This is the main method, the entry point for any standalone Java application.
      * The Java Virtual Machine (JVM) looks for this specific method to start program execution.
      *
-     * @param args An array of String objects that can receive command-line arguments
+     * @param args An array of String objects that can receive command-line arguments.
      *             passed to the program when it is executed.
      */
     public static void main(String[] args) {

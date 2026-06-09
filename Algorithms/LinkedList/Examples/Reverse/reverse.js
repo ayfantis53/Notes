@@ -1,14 +1,16 @@
-/** ---------------------------------------------
- * 
- * Reverse a linked list
- --------------------------------------------- */
+/**
+ * @file This script handles reversing a linked list.
+ * @module Algorithms/LinkedList/Examples/Reverse/reverse.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
  /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
-     * Creates an Instance of Node
+     * Creates an Instance of Node.
      * @param {String} value data of our Node.
      */
     constructor(value) {
@@ -18,10 +20,10 @@ class Node {
 };
 
 /**
- * Reverse a linkedlist
+ * Reverse a linkedlist.
  * 
- * @param {Node}   head   first Node in LinkedList. 
- * @returns Node of new head
+ * @param {Node} head first Node in LinkedList. 
+ * @returns [Node] of new head.
  */
 const reverse = (head) => {
 
@@ -39,11 +41,11 @@ const reverse = (head) => {
 }
 
 /**
- * Reverse a linkedlist Recursively
+ * Reverse a linkedlist Recursively.
  * 
  * @param {Node} head     first Node in LinkedList. 
  * @param {Node} previous previous Node in LinkedList.
- * @returns Node of new head
+ * @returns [Node] of new head.
  */
 const reverseRecur = (head, previous = null) => {
     if (head === null) {
@@ -57,10 +59,10 @@ const reverseRecur = (head, previous = null) => {
 }
 
 /**
- * print out all values of linked list
+ * Print out all values of linked list.
  * 
  * @param {Node} head first Node in Linked List.
- * @returns void
+ * @returns [void]
  */
 const traverse = (head) => {
     

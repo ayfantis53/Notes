@@ -1,11 +1,8 @@
-# ---------------------------------------------
-# 
-#  Memoize a Fibonacci sequence function
-# ---------------------------------------------
+"""Memoize a Fibonacci sequence function."""
+
 
 def fibonacci(input):
-    """
-    Function that calculates the nth Fibonacci number
+    """Function that calculates the nth Fibonacci number.
 
     Args:
         input (Number): The index of the Fibonacci number to calculate (non-negative integer).
@@ -19,8 +16,7 @@ def fibonacci(input):
     return fibonacci(input - 1) + fibonacci(input - 2)
 
 def fibonacciMemoized(input, memo = {}):
-    """
-    Memoized function that calculates the nth Fibonacci number
+    """Memoized function that calculates the nth Fibonacci number.
 
     Args:
         input (Number):    The index of the Fibonacci number to calculate (non-negative integer).
@@ -39,8 +35,7 @@ def fibonacciMemoized(input, memo = {}):
     return memo[input]
 
 def fibonacciTabulated(input):
-    """
-    Tabulated function that calculates the nth Fibonacci number
+    """Tabulated function that calculates the nth Fibonacci number.
 
     Args:
         input (Number): The index of the Fibonacci number to calculate (non-negative integer).
@@ -59,8 +54,8 @@ def fibonacciTabulated(input):
     return table[input]
 
 
-# Main Code
-if __name__ == '__main__':
+def main():
+    """Memoize a Fibonacci sequence function."""
     input1 = 2
     input2 = 5
     input3 = 9
@@ -85,3 +80,9 @@ if __name__ == '__main__':
     print(f'Fibonacci number TABULATED of {input5} is: [{fibonacciMemoized(input5)}]')
     print(f'Fibonacci number TABULATED of {input6} is: [{fibonacciMemoized(input6)}]')
     print(f'Fibonacci number TABULATED of {input7} is: [{fibonacciMemoized(input7)}]')
+
+
+# Main Code
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

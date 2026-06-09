@@ -1,14 +1,16 @@
-/** ---------------------------------------------
- * 
- * Find if a value is in a Binary Tree
- --------------------------------------------- */
+/**
+ * @file This script handles finding if a value is in a Binary Tree.
+ * @module Algorithms/Trees/Examples/FindElement/find.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
  /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
-     * Creates an Instance of Node
+     * Creates an Instance of Node.
      * @param {String} value data of our Node.
      */
     constructor(value) {
@@ -19,11 +21,11 @@ class Node {
 };
 
 /**
- * Depth First Search Find if a value is in a Binary Tree
+ * Depth First Search Find if a value is in a Binary Tree.
  * 
  * @param {Node}   root   first Node in Binary Tree. 
  * @param {String} target  value to find in Binary Tree.
- * @returns [bool] if value was found in tree
+ * @returns [bool] if value was found in tree.
  */
 const findDFS = (root, target) => {
     const nodes  = [ root ];
@@ -44,11 +46,11 @@ const findDFS = (root, target) => {
 }
 
 /**
- * Breadth First Search Find if a value is in a Binary Tree
+ * Breadth First Search Find if a value is in a Binary Tree.
  * 
  * @param {Node}   root   first Node in Binary Tree. 
  * @param {String} target  value to find in Binary Tree.
- * @returns [bool] if value was found in tree
+ * @returns [bool] if value was found in tree.
  */
 const findBFS = (root, target) => {
     const nodes  = [ root ];
@@ -69,11 +71,11 @@ const findBFS = (root, target) => {
 }
 
 /**
- * Depth First Search Find if a value is in a Binary Tree Recursion
+ * Depth First Search Find if a value is in a Binary Tree Recursion.
  * 
  * @param {Node}   root   first Node in Binary Tree.
  * @param {String} target value to find in Binary Tree.
- * @returns [bool] if value was found in tree
+ * @returns [bool] if value was found in tree.
  */
 const findDFSRecurs = (root, target) => {
     if (root === null)         { return false; }
@@ -92,10 +94,10 @@ const findDFSRecurs = (root, target) => {
 }
 
 /**
- * Prints the result of our recursive DFS
+ * Prints the result of our recursive DFS.
  * @param {*} isFound result of recursive call.
  * @param {*} target  what we were loking for.
- * @returns void
+ * @returns [void]
  */
 const printResult = (isFound, target) => {
     if (isFound) {

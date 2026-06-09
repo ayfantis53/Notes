@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 
-/// @brief Class that defines our Node 
+
+/// @brief Class that defines our Node. 
 class Node {
 public:
     /// @brief constructor to initialize a new node with data.
@@ -19,9 +20,9 @@ public:
     Node* next;
 };
 
-/// @brief Finds value of node that user chooses
+/// @brief Finds value of node that user chooses.
 /// @param head first Node in LinkedList. 
-/// @returns Node of new head
+/// @returns [Node] of new head.
 auto reverse(Node* head) -> Node*
 {
     Node* current  = head;
@@ -38,10 +39,10 @@ auto reverse(Node* head) -> Node*
     return previous;
 }
 
-/// @brief Reverse a linkedlist Recursively
+/// @brief Reverse a linkedlist Recursively.
 /// @param head first Node in LinkedList.
 /// @param previous previous Node in LinkedList.
-/// @returns Node of new head
+/// @returns [Node] of new head.
 auto reverseRecur(Node* head, Node* previous = nullptr) -> Node*
 {
     if (head == nullptr)
@@ -55,7 +56,7 @@ auto reverseRecur(Node* head, Node* previous = nullptr) -> Node*
     return reverseRecur(next, head);
 }
 
-/// @brief print out linked list
+/// @brief print out linked list.
 /// @param head first Node in LinkedList. 
 auto traverse(Node* head) -> void
 {

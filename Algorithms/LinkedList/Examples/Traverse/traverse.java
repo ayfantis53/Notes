@@ -1,12 +1,12 @@
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
     char value;
     Node next;
 
     /**
-     *   constructor to initialize a new node with data.
+     *  Constructor to initialize a new node with data.
      *  @param value data to set Node.
      */
     Node (char value) {
@@ -16,15 +16,15 @@ class Node {
 }
 
 /**
- * Class that print out all values of linked list
+ * Class that print out all values of linked list.
  */
 class traverse {
 
     /**
-     * print out linked list
+     * Print out linked list.
      * 
      * @param head first Node in LinkedList.
-     * @return void
+     * @return [void]
      */
     public static void traverse(Node head) {
 
@@ -40,11 +40,11 @@ class traverse {
     }
 
     /**
-     * print out linked list recursively
+     * Print out linked list recursively.
      * 
      * @param head   first Node in LinkedList. 
      * @param output output of entire linkedlist.
-     * @return int 0 for success
+     * @return [int] 0 for success.
      */
     public static int traverseRecur(Node head, String output) {
         if (head == null) {

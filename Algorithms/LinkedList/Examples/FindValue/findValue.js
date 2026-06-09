@@ -1,10 +1,12 @@
-/** ---------------------------------------------
- * 
- * Find a Node in linked list
- --------------------------------------------- */
+/**
+ * @file This script handles finding a Node in linked list.
+ * @module Algorithms/LinkedList/Examples/FindValue/findValue.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
  /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
@@ -18,11 +20,11 @@ class Node {
 }
 
 /**
- * Find a value in a LinkedList
+ * Find a value in a LinkedList.
  * 
- * @param {Node}   head   first Node in LinkedList. 
+ * @param {Node}   head   first Node in LinkedList.
  * @param {String} target value to find in LinkedList.
- * @returns void
+ * @returns [void]
  */
 const findValue = (head, target) => {
 
@@ -44,10 +46,10 @@ const findValue = (head, target) => {
 /**
  * Find a value in a LinkedList recursively.
  * 
- * @param {Node}   head   first Node in LinkedList. 
+ * @param {Node}   head   first Node in LinkedList.
  * @param {String} target value to find in LinkedList.
  * @param {Number} count  node iteration we are on.
- * @returns void
+ * @returns [void]
  */
 const findValueRecur = (head, target, count) => {
     if (head === null) {

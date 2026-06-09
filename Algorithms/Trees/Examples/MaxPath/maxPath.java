@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
     int  value;
@@ -23,11 +23,11 @@ class Node {
 }
 
 /**
- * Class that Find max path of a Binary Tree
+ * Class that Find max path of a Binary Tree.
  */
 public class maxPath {
     /**
-     * Depth First Search find max path of a Binary Tree
+     * Depth First Search find max path of a Binary Tree.
      * 
      * @param root first Node in Binary Tree. 
      * @returns [void]
@@ -58,7 +58,7 @@ public class maxPath {
     }
 
     /**
-     * Breadth First Search find max path of a Binary Tree
+     * Breadth First Search find max path of a Binary Tree.
      * 
      * @param root first Node in Binary Tree. 
      * @returns [void]
@@ -89,10 +89,10 @@ public class maxPath {
     }
 
     /**
-     * Depth First Search find max path of a Binary Tree recursively
+     * Depth First Search find max path of a Binary Tree recursively.
      * 
      * @param root first Node in Binary Tree. 
-     * @returns [Int] the sum of max path of nodes
+     * @return [Int] the sum of max path of nodes.
      */
     public static int maxPathDFSRecurs(Node root) {
         if (root == null) { return Integer.MIN_VALUE; }

@@ -1,26 +1,24 @@
-# ---------------------------------------------
-# 
-#  Reverse a linked list
-# ---------------------------------------------
+"""Reverse a linked list."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """Class that defines our Node."""
 
     def __init__(self, value):
+        """Initialize Node."""
         self.value = value
         self.next  = None
 
+
 def reverse(head):
-    """
-    Reverse a linkedlist
+    """Reverse a linkedlist.
 
     Args:
-        head (Node):     first Node in Linked List.
+        head (Node): first Node in Linked List.
 
     Returns:
-        Node of new head
+        [Node] new head.
     """
-
     current = head
     previous = None
 
@@ -32,18 +30,17 @@ def reverse(head):
 
     return previous
  
+
 def reverseRecur(head, previous):
-    """
-    Reverse a linkedlist Recursively
+    """Reverse a linkedlist Recursively.
 
     Args:
         head (Node):     first Node in Linked List.
         previous (Node): previous Node in LinkedList.
 
     Returns:
-        Node of new head
+        [Node] new head.
     """
-
     if head is None:
         return previous
     
@@ -52,15 +49,15 @@ def reverseRecur(head, previous):
 
     return reverseRecur(next, head)
 
+
 def traverse(head):
-    """ 
-    print out linked list 
+    """Print out linked list. 
 
     Args:
         head (Node): first Node in Linked List.
 
     Returns:
-        void
+        [void]
     """
     output = ""
 
@@ -70,8 +67,8 @@ def traverse(head):
 
     print(f'{output}null')
 
-if __name__ == "__main__":
-
+def main():
+    """Reverse a linked list."""
     a = Node('A')
     b = Node('B')
     c = Node('C')
@@ -94,3 +91,8 @@ if __name__ == "__main__":
 
     reverseRecur(a, None)
     traverse(d)
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

@@ -1,6 +1,7 @@
 #include <iostream>
 
-/// @brief Class that defines our Node 
+
+/// @brief Class that defines our Node.
 class Node {
 public:
     /// @brief constructor to initialize a new node with data.
@@ -33,10 +34,10 @@ auto sum(Node* head) -> void
     std::cout << "The Iterative Sum of the linked list is: " << sum << std::endl;
 }
 
-/// @brief sums all values of linked list Recursively
+/// @brief sums all values of linked list Recursively.
 /// @param head first Node in LinkedList. 
 /// @param sum  total value of all nodes added together.
-/// @returns int 0 for success
+/// @returns [int] 0 for success.
 auto sumRecur(Node* head, int sum) -> int
 {
     if (head == nullptr)

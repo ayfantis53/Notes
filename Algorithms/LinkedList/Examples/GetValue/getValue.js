@@ -1,14 +1,16 @@
-/** ---------------------------------------------
- * 
- * Find a Value in linked list
- --------------------------------------------- */
+/**
+ * @file This script handles finding a Value in linked list.
+ * @module Algorithms/LinkedList/Examples/GetValue/getValue.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
 /**
- *  Class that defines our Node
+ *  Class that defines our Node.
  */
 class Node {
     /**
-     * Creates an Instance of Node
+     * Creates an Instance of Node.
      * @param {String} value data of our Node.
      */
     constructor(value) {
@@ -18,11 +20,11 @@ class Node {
 };
 
 /**
- * Finds value of node that user chooses
+ * Finds value of node that user chooses.
  * 
  * @param {Node}   head   first Node in LinkedList. 
  * @param {Number} target value to find in LinkedList.
- * @returns void
+ * @returns [void]
  */
 const getValue = (head, target) => {
 
@@ -43,12 +45,12 @@ const getValue = (head, target) => {
 }
 
 /**
- * Finds value of node that user chooses recursively
+ * Finds value of node that user chooses recursively.
  * 
  * @param {Node}   head   first Node in LinkedList. 
  * @param {Number} target value to find in LinkedList.
  * @param {Number} count  node iteration we are on.
- * @returns void
+ * @returns [void]
  */
 const getValueRecur = (head, target, count) => {
 

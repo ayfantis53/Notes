@@ -1,5 +1,5 @@
 /**
- * Zipper combine two linked lists
+ * Zipper combine two linked lists.
  */
 class Node {
     char value;
@@ -21,11 +21,11 @@ class Node {
 class zipper {
 
     /**
-     * Zipper combine two linked lists
+     * Zipper combine two linked lists.
      * 
      * @param head1 first Node in first Linked List.
      * @param head2 first Node in second Linked List.
-     * @return Node of head1
+     * @return [Node] of head1
      */
     public static Node zipper(Node head1, Node head2) {
 
@@ -55,11 +55,11 @@ class zipper {
     }
 
     /**
-     * Zipper combine two linked lists recursively
+     * Zipper combine two linked lists recursively.
      * 
      * @param head1 first Node in first Linked List.
      * @param head2 first Node in second Linked List.
-     * @return Node of head1
+     * @return [Node] of head1
      */
     public static Node zipperRecur(Node head1, Node head2) {
         if (head1 == null && head2 == null) { return null; }
@@ -77,10 +77,10 @@ class zipper {
     }
 
     /**
-     * print out linked list
+     * print out linked list.
      * 
      * @param head first Node in LinkedList.
-     * @return void
+     * @return [void]
      */
     public static void traverse(Node head) {
 

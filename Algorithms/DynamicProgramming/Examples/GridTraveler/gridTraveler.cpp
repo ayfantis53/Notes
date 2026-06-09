@@ -5,7 +5,7 @@
 
 std::unordered_map<std::string, long long> memo;
 
-/// @brief Function that calculates the shortest path in a gird traveler
+/// @brief Function that calculates the shortest path in a gird traveler.
 /// @param x size of grid we will be traveling in.
 /// @param y size of grid we will be traveling in.
 /// @return [int] the amount of ways we can travel grid
@@ -17,7 +17,7 @@ auto gridTraveler(int x, int y) -> int
     return gridTraveler(x - 1, y) + gridTraveler(x, y - 1);
 }
 
-/// @brief Memoized function that calculates gridTraveler sequence of a given number
+/// @brief Memoized function that calculates gridTraveler sequence of a given number.
 /// @param x size of grid we will be traveling in.
 /// @param y size of grid we will be traveling in.
 /// @return [Long] the resulting gridTraveler number

@@ -1,23 +1,21 @@
-# ---------------------------------------------
-# 
-# Find max path of a Binary Tree
-# ---------------------------------------------
+"""Find max path of a Binary Tree."""
+
 
 class Node:
-    """ Class that defines our Node """
+    """Class that defines our Node."""
 
     def __init__(self, value):
+        """Initialize Node."""
         self.value = value
         self.left  = None
         self.right = None
 
 
 def maxPathDFS(root):
-    """
-    Depth First Search find max path of a Binary Tree
+    """Depth First Search find max path of a Binary Tree.
 
     Args:
-        root(Node): first Node in Binary Tree.
+        root (Node): first Node in Binary Tree.
 
     Returns:
         [void] 
@@ -41,11 +39,10 @@ def maxPathDFS(root):
 
 
 def maxPathBFS(root):
-    """
-    Breadth First Search find max path of a Binary Tree
+    """Breadth First Search find max path of a Binary Tree.
 
     Args:
-        root(Node): first Node in Binary Tree.
+        root (Node): first Node in Binary Tree.
 
     Returns:
         [void] 
@@ -69,11 +66,10 @@ def maxPathBFS(root):
 
 
 def maxPathDFSRecurs(root):
-    """
-    Depth First Search find max path of a Binary Tree recursively
+    """Depth First Search find max path of a Binary Tree recursively.
 
     Args:
-        root(Node): first Node in Binary Tree.
+        root (Node): first Node in Binary Tree.
 
     Returns:
         [void] 
@@ -87,8 +83,8 @@ def maxPathDFSRecurs(root):
     return root.value + maxChildPathSum
 
 
-# Main Code
-if __name__ == '__main__':
+def main():
+    """Find max path of a Binary Tree."""
     a = Node(5)
     b = Node(7)
     c = Node(4)
@@ -122,3 +118,8 @@ if __name__ == '__main__':
     #        7   4
     #       / \   \
     #      8   3   9
+
+
+if __name__ == '__main__':
+    """ Ensure this code only runs if the script is executed. Not when it's imported as a module by another file."""
+    main()

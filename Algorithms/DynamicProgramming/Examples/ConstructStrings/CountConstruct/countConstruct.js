@@ -1,14 +1,16 @@
-/** ---------------------------------------------
- * 
- * Finds out how many ways we can construct a string out of given substrings
- --------------------------------------------- */
+/**
+ * @file This script handles how many ways we can construct a string out of given substrings.
+ * @module Algorithms/DynamicProgramming/Examples/ConstructStrings/CountConstruct/countConstruct.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
 /**
- * Finds out how many ways we can construct a string out of given substrings
+ * Finds out how many ways we can construct a string out of given substrings.
  * O(n^m * m) time complexity           O(m^2) Space complexity
  * @param {String} target word we are trying to make using substrings.
- * @param {Array} substrs substrings we are testing to create target word
- * @returns [Number] amount of ways we can form word
+ * @param {Array} substrs substrings we are testing to create target word.
+ * @returns [Number] amount of ways we can form word.
  */
 const countConstruct = (target, wordBank) => {
     if (target === '') { return 1; }
@@ -25,11 +27,11 @@ const countConstruct = (target, wordBank) => {
 } 
 
 /**
- * Memoized Finds out how many ways we can construct a string out of given substrings
+ * Memoized Finds out how many ways we can construct a string out of given substrings.
  * O(n * m^2) time complexity           O(m^2) Space complexity
  * @param {String} target word we are trying to make using substrings.
- * @param {Array} substrs substrings we are testing to create target word
- * @returns [Number] amount of ways we can form word
+ * @param {Array} substrs substrings we are testing to create target word.
+ * @returns [Number] amount of ways we can form word.
  */
 const countConstructMemoized = (target, wordBank, memo = []) => {
     if (target in memo) { return memo[target]; }
@@ -48,11 +50,11 @@ const countConstructMemoized = (target, wordBank, memo = []) => {
 }
 
 /**
- * Tabulated Finds out how many ways we can construct a string out of given substrings
+ * Tabulated Finds out how many ways we can construct a string out of given substrings.
  * O(m^2 * n) time complexity           O(m) Space complexity
  * @param {String} target word we are trying to make using substrings.
- * @param {Array} wordBank substrings we are testing to create target word
- * @returns [Number] amount of ways we can form word
+ * @param {Array} wordBank substrings we are testing to create target word.
+ * @returns [Number] amount of ways we can form word.
  */
 const countConstructTabulated = (target, wordBank) => {
     const table = Array(target.length + 1).fill(0);

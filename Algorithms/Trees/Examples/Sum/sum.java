@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 
+
 /**
- * Class that defines our Node
+ * Class that defines our Node.
  */
 class Node {
 
@@ -15,7 +16,7 @@ class Node {
     Node right;
 
     /**
-     *   constructor to initialize a new node with data.
+     *  Constructor to initialize a new node with data.
      *  @param value data to set Node.
      */
     Node(int value) {
@@ -26,11 +27,11 @@ class Node {
 }
 
 /**
- * Class Sums all values of a Binary Tree
+ * Class Sums all values of a Binary Tree.
  */
 public class sum {
     /**
-     * Depth First Search Sum all values of a Binary Tree
+     * Depth First Search Sum all values of a Binary Tree.
      * 
      * @param root first Node in Binary Tree.
      * @return [void]
@@ -54,7 +55,7 @@ public class sum {
     }
 
     /**
-     * Depth First Search Sum all values of a Binary Tree
+     * Depth First Search Sum all values of a Binary Tree.
      * 
      * @param root first Node in Binary Tree.
      * @return [void]
@@ -78,7 +79,7 @@ public class sum {
     }
 
     /**
-     * Depth First Search Sum all values of a Binary Tree Recursively
+     * Depth First Search Sum all values of a Binary Tree Recursively.
      * 
      * @param root first Node in Binary Tree.
      * @return [Int] of sum

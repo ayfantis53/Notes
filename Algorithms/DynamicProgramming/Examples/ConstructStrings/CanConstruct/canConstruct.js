@@ -1,13 +1,15 @@
-/** ---------------------------------------------
- * 
- * Finds out if we can construct a string out of given substrings
- --------------------------------------------- */
+/**
+ * @file This script handles if we can construct a string out of given substrings.
+ * @module Algorithms/DynamicProgramming/Examples/ConstructStrings/CanConstruct/canConstruct.js
+ * @author Ayfantis <ayfantis53>
+ */
+
 
 /**
- * Finds out if we can construct a string out of given substrings
+ * Finds out if we can construct a string out of given substrings.
  * 
  * @param {String} target word we are trying to make using substrings.
- * @param {Array} substrs substrings we are testing to create target word
+ * @param {Array} substrs substrings we are testing to create target word.
  * @returns [bool]
  */
 const canConstruct = (target, wordBank) => {
@@ -26,10 +28,10 @@ const canConstruct = (target, wordBank) => {
 } 
 
 /**
- * Memoized Finds out if we can construct a string out of given substrings
+ * Memoized Finds out if we can construct a string out of given substrings.
  * 
  * @param {String} target word we are trying to make using substrings.
- * @param {Array} substrs substrings we are testing to create target word
+ * @param {Array} substrs substrings we are testing to create target word.
  * @returns [bool]
  */
 const canConstructMemoized = (target, wordBank, memo = []) => {
@@ -51,10 +53,10 @@ const canConstructMemoized = (target, wordBank, memo = []) => {
 }
 
 /**
- * Tabulated Finds out if we can construct a string out of given substrings
+ * Tabulated Finds out if we can construct a string out of given substrings.
  * O(m^2 * n) time complexity           O(m) Space complexity
  * @param {String} target word we are trying to make using substrings.
- * @param {Array} wordBank substrings we are testing to create target word
+ * @param {Array} wordBank substrings we are testing to create target word.
  * @returns [bool]
  */
 const canConstructTabulated = (target, wordBank) => {
