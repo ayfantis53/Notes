@@ -2,15 +2,24 @@
 
 
 class Node:
-    """Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str): Value being stored in node of linkedlist.
+        next (Node): node that this node points to.
+    """
 
-    def __init__(self, value):
-        """Initialize Node."""
+    def __init__(self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of linkedlist.
+        """
         self.value = value
         self.next  = None
 
 
-def zipper(head1, head2):
+def zipper(head1: Node, head2: Node) -> Node:
     """Zipper combine two linked lists.
 
     Args:
@@ -20,8 +29,8 @@ def zipper(head1, head2):
     Returns:
         [Node] of head1.
     """
-    count    = 0 
-    tail     = head1
+    count = 0 
+    tail = head1
     current1 = head1.next
     current2 = head2
 
@@ -44,7 +53,7 @@ def zipper(head1, head2):
     return head1
 
 
-def zipperRecur(head1, head2):
+def zipperRecur(head1: Node, head2: Node) -> Node:
     """Zipper combine two linked lists recursively.
 
     Args:
@@ -71,14 +80,11 @@ def zipperRecur(head1, head2):
     return head1
 
 
-def traverse(head):
+def traverse(head: Node) -> None:
     """Print out linked list.
 
     Args:
         head (Node): first Node in Linked List.
-
-    Returns:
-        [void]
     """
     output = ""
 

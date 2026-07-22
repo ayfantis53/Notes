@@ -2,23 +2,30 @@
 
 
 class Node:
-    """Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str):  Value being stored in node of tree.
+        left (Node):  left node that this node points to.
+        right (Node): right node that this node points to.
+    """
 
-    def __init__(self, value):
-        """Initialize Node."""
+    def __init__(self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of tree.
+        """
         self.value = value
         self.left  = None
         self.right = None
 
 
-def sumDFS(root):
+def sumDFS(root: Node) -> None:
     """Depth First Search Sum all values of a Binary Tree.
 
     Args:
         root (Node): first Node in Binary Tree.
-
-    Returns:
-        [void]
     """
     sum = 0
     nodes = [root]
@@ -35,14 +42,11 @@ def sumDFS(root):
     print(f'[{sum}] is the SUM of all tree nodes')
     return
 
-def sumBFS(root):
+def sumBFS(root: Node) -> None:
     """Breadth First Search Sum all values of a Binary Tree.
 
     Args:
         root (Node): first Node in Binary Tree.
-
-    Returns:
-        [void]
     """
     sum = 0
     nodes = [root]
@@ -59,14 +63,11 @@ def sumBFS(root):
     print(f'[{sum}] is the SUM of all tree nodes')
     return
 
-def sumDFSRecurs(root):
+def sumDFSRecurs(root: Node) -> None:
     """Depth First Search Sum all values of a Binary Tree recursively.
 
     Args:
         root (Node): first Node in Binary Tree.
-
-    Returns:
-        [void]
     """
     if root == None:
         return 0

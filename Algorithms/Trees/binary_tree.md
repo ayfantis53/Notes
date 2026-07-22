@@ -1,4 +1,5 @@
 ## BINARY TREE
+
 ### A binary tree is a hierarchical data structure composed of nodes
 * where each node has at most two children.
 * referred to as the left child and the right child. 
@@ -40,6 +41,29 @@
     - Removing a node from the tree.
 4. **Search**: 
     - Finding a specific node within the tree.
+
+
+
+## COMPLILING/RUN CODE
+> run code
+```bash
+cd <directory_with_file>
+
+# JavaScript: 
+node <fileName>.js
+
+# Python:   
+python <fileName>.py
+
+# java: 
+# compile                               run     
+javac <fileName>.java               &&  java <fileName>
+
+# cpp:
+# compile                               run        
+g++ <fileName>.cpp -o <fileName>    &&  ./<fileName>
+``` 
+
 
 ## REFERENCE
 - [Binary Tree Algorithms for Technical Interviews](https://www.youtube.com/watch?v=fAAZixBzIAI&t=6372s)

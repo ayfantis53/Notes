@@ -59,19 +59,24 @@
     * all elements in an array are stored right next to eachother in computers memory.
     * affects performance.
 
-## COMPLILING CODE
+## COMPLILING/RUN CODE
+> run code
 ```bash
 cd <directory_with_file>
 
-# run code
-    # JavaScript 
-    node <fileName>.js
-    # Python     
-    python <fileName>.py
-    # java       
-    javac <fileName>.java  &&  java <fileName>
-    # cpp        
-    g++ <fileName>.cpp -o <fileName>    &&  ./<fileName>
+# JavaScript: 
+node <fileName>.js
+
+# Python:   
+python <fileName>.py
+
+# java: 
+# compile                               run     
+javac <fileName>.java               &&  java <fileName>
+
+# cpp:
+# compile                               run        
+g++ <fileName>.cpp -o <fileName>    &&  ./<fileName>
 ``` 
 
 

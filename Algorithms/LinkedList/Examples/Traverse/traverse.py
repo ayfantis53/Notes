@@ -2,22 +2,28 @@
 
 
 class Node:
-    """Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str): Value being stored in node of linkedlist.
+        next (Node): node that this node points to.
+    """
 
-    def __init__(self, value):
-        """Initialize Node."""
+    def __init__(self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of linkedlist.
+        """
         self.value = value
         self.next  = None
 
 
-def traverse(head):
+def traverse(head: Node) -> None:
     """Print out linked list.
 
     Args:
         head (Node): first Node in Linked List.
-
-    Returns:
-        [void]
     """
     output = ""
 
@@ -28,15 +34,12 @@ def traverse(head):
     print(f'{output}null')
 
 
-def traverseRecur(head, output):
+def traverseRecur(head: Node, output: str) -> None:
     """Print out linked list recursively.
 
     Args:
-        head (Node):     first Node in Linked List.
-        output (String): output of entire linkedlist.
-
-    Returns:
-        [void]
+        head (Node):  first Node in Linked List.
+        output (str): output of entire linkedlist.
     """
     if head == None:
         print(f'{output}null')

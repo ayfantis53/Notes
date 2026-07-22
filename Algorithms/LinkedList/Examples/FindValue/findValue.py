@@ -2,22 +2,29 @@
 
 
 class Node:
-    """ Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str): Value being stored in node of linkedlist.
+        next (Node): node that this node points to.
+    """
 
-    def __init__ (self, value):
+    def __init__ (self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of linkedlist.
+        """
         self.value = value
         self.next  = None
 
 
-def findValue(head, target):
+def findValue(head: Node, target: str) -> None:
     """Find a value in a LinkedList.
 
     Args:
         head (Node):     first Node in Linked List.
-        target (String): value of Node we want to find.
-
-    Returns:
-        [void]
+        target (str): value of Node we want to find.
     """
     count = 1
 
@@ -31,23 +38,22 @@ def findValue(head, target):
     print(f'No Value of {target} found in linked list')
 
 
-def findValueRecur(head, target, count):
+def findValueRecur(head: Node, target: str, count: int) -> None:
     """Find a value in a LinkedList Recursively.
 
     Args:
-        head (Node):     first Node in Linked List.
-        target (String): value of Node we want to find.
-        count (Number):  node iteration we are on.
-    
-    Returns:
-        [void]
+        head (Node):  first Node in Linked List.
+        target (str): value of Node we want to find.
+        count (int):  node iteration we are on.
     """
     if head == None:
         print(f'No Value of {target} found in linked list')
         return
+    
     if head.value == target:
         print(f'Found value {target} at the NODE: {count}')
         return 
+    
     return findValueRecur(head.next, target, count + 1)
 
 

@@ -1,29 +1,29 @@
 """Memoize a Fibonacci sequence function."""
 
 
-def fibonacci(input):
+def fibonacci(input: int) -> int:
     """Function that calculates the nth Fibonacci number.
 
     Args:
-        input (Number): The index of the Fibonacci number to calculate (non-negative integer).
+        input (int): The index of the Fibonacci number to calculate (non-negative integer).
 
     Returns:
-        [Number] The nth Fibonacci number.
+        [int] The nth Fibonacci number.
     """
     if input <= 2:
         return 1
     
     return fibonacci(input - 1) + fibonacci(input - 2)
 
-def fibonacciMemoized(input, memo = {}):
+def fibonacciMemoized(input: int, memo: dict = {}) -> int:
     """Memoized function that calculates the nth Fibonacci number.
 
     Args:
-        input (Number):    The index of the Fibonacci number to calculate (non-negative integer).
-        memo (Dictionary): used as a cache to store previously computed values.
+        input (int): The index of the Fibonacci number to calculate (non-negative integer).
+        memo (dict): used as a cache to store previously computed values.
 
     Returns:
-        [Number] The nth Fibonacci number.
+        [int] The nth Fibonacci number.
     """
     if input in memo:
         return memo[input]
@@ -34,14 +34,14 @@ def fibonacciMemoized(input, memo = {}):
     
     return memo[input]
 
-def fibonacciTabulated(input):
+def fibonacciTabulated(input: int) -> int:
     """Tabulated function that calculates the nth Fibonacci number.
 
     Args:
-        input (Number): The index of the Fibonacci number to calculate (non-negative integer).
+        input (int): The index of the Fibonacci number to calculate (non-negative integer).
 
     Returns:
-        [Number] The nth Fibonacci number.
+        [int] The nth Fibonacci number.
     """
     table = [0] * (input + 1)
     

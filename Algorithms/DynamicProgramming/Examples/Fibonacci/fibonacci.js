@@ -4,6 +4,7 @@
  * @author Ayfantis <ayfantis53>
  */
 
+
 /**
  * Function that calculates the nth Fibonacci number.
  * 

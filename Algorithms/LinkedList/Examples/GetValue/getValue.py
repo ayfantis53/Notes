@@ -2,23 +2,29 @@
 
 
 class Node:
-    """Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str): Value being stored in node of linkedlist.
+        next (Node): node that this node points to.
+    """
 
-    def __init__(self, value):
-        """Initialize Node."""
+    def __init__(self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of linkedlist.
+        """
         self.value = value
         self.next  = None
 
 
-def getValue(head, target):
+def getValue(head: Node, target: int) -> None:
     """Finds value of node that user chooses.
 
     Args:
-        head (Node):     first Node in Linked List.
-        target (Number): value of Node we want to find.
-
-    Returns:
-        [void]
+        head (Node):  first Node in Linked List.
+        target (int): value of Node we want to find.
     """
     count = 1
 
@@ -33,20 +39,18 @@ def getValue(head, target):
     print(f'Linked list doesnt have {target} Nodes!')
 
 
-def getValueRecur(head, target, count):
+def getValueRecur(head: Node, target: int, count: int) -> None:
     """Finds value of node that user chooses.
 
     Args:
-        head (Node):     first Node in Linked List.
-        target (Number): value of Node we want to find.
-        count (Number):  node iteration we are on.
-
-    Returns:
-        [void]
+        head (Node):  first Node in Linked List.
+        target (int): value of Node we want to find.
+        count (int):  node iteration we are on.
     """
     if head == None:
         print(f'Linked list doesnt have {target} Nodes!')
         return
+    
     if count == target:
         print(f'The value of the {target} node is {head.value}')
         return

@@ -2,15 +2,24 @@
 
 
 class Node:
-    """Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str): Value being stored in node of linkedlist.
+        next (Node): node that this node points to.
+    """
 
-    def __init__(self, value):
-        """Initialize Node."""
+    def __init__(self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of linkedlist.
+        """
         self.value = value
         self.next  = None
 
 
-def reverse(head):
+def reverse(head: Node) -> Node:
     """Reverse a linkedlist.
 
     Args:
@@ -31,7 +40,7 @@ def reverse(head):
     return previous
  
 
-def reverseRecur(head, previous):
+def reverseRecur(head: Node, previous: Node) -> Node:
     """Reverse a linkedlist Recursively.
 
     Args:
@@ -44,20 +53,17 @@ def reverseRecur(head, previous):
     if head is None:
         return previous
     
-    next       = head.next
-    head.next  = previous
+    next = head.next
+    head.next = previous
 
     return reverseRecur(next, head)
 
 
-def traverse(head):
+def traverse(head: Node) -> None:
     """Print out linked list. 
 
     Args:
         head (Node): first Node in Linked List.
-
-    Returns:
-        [void]
     """
     output = ""
 
@@ -66,6 +72,7 @@ def traverse(head):
         head = head.next
 
     print(f'{output}null')
+
 
 def main():
     """Reverse a linked list."""

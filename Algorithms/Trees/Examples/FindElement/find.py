@@ -2,21 +2,31 @@
 
 
 class Node:
-    """Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str):  Value being stored in node of tree.
+        left (Node):  left node that this node points to.
+        right (Node): right node that this node points to.
+    """
 
-    def __init__(self, value):
-        """Initialize Node."""
+    def __init__(self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of tree.
+        """
         self.value = value
         self.left  = None
         self.right = None
 
 
-def findDFS(root, target):
+def findDFS(root: Node, target: str):
     """Depth First Search of a Binary Tree.
 
     Args:
-        root (Node):     first Node in Binary Tree.
-        target (String): value to find in Binary Tree.
+        root (Node):  first Node in Binary Tree.
+        target (str): value to find in Binary Tree.
 
     Returns:
         [bool] if value was found in tree.
@@ -31,6 +41,7 @@ def findDFS(root, target):
 
         if current.right:
             nodes.append(current.right)
+            
         if current.left:
             nodes.append(current.left)
 
@@ -38,12 +49,12 @@ def findDFS(root, target):
     return False
 
 
-def findBFS(root, target):
+def findBFS(root: Node, target: str) -> bool:
     """Breadth First Search of a Binary Tree.
 
     Args:
-        root (Node):     first Node in Binary Tree.
-        target (String): value to find in Binary Tree.
+        root (Node):  first Node in Binary Tree.
+        target (str): value to find in Binary Tree.
 
     Returns:
         [bool] if value was found in tree.
@@ -53,12 +64,14 @@ def findBFS(root, target):
 
     while len(nodes) > 0:
         current = nodes.pop(0)
+
         if current.value == target:
             print(f'[{target}] FOUND in tree!')
             return True
 
         if current.right:
             nodes.append(current.right)
+
         if current.left:
             nodes.append(current.left)
 
@@ -66,12 +79,12 @@ def findBFS(root, target):
     return False
     
 
-def findDFSRecurs(root, target):
+def findDFSRecurs(root: Node, target: str) -> bool:
     """Depth First Search of a Binary Tree Recursion.
 
     Args:
-        root (Node):     first Node in Binary Tree.
-        target (String): value to find in Binary Tree.
+        root (Node):  first Node in Binary Tree.
+        target (str): value to find in Binary Tree.
     
     Returns:
         [bool] if value was found in tree.
@@ -79,26 +92,31 @@ def findDFSRecurs(root, target):
 
     if root == None:
         return False
+    
     if root.value == target:
         return True
     
     rightValues = findDFSRecurs(root.right, target)
-    if rightValues == True:
+
+    if rightValues:
         return True
+    
     leftValues  = findDFSRecurs(root.left, target)
-    if leftValues == True:
+
+    if leftValues:
         return True
 
     return False
 
 
-def printResult(isFound, target):
+def printResult(isFound: bool, target: str) -> None:
     """Print result of the code.
+
     Args:
         isFound (bool): result of findDFSRecurs function.
         target (str):   what we want to find.
     """
-    if isFound == True:
+    if isFound:
         print(f'[{target}] FOUND in tree!')
     else:
         print(f'[{target}] NOT FOUND in tree!')

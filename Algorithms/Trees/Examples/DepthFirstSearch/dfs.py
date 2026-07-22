@@ -2,22 +2,33 @@
 
 
 class Node:
-    """Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str):  Value being stored in node of tree.
+        left (Node):  left node that this node points to.
+        right (Node): right node that this node points to.
+    """
 
-    def __init__(self, value):
-        """Initialize Node."""
+    def __init__(self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of tree.
+        """
         self.value = value
         self.left  = None
         self.right = None
 
-def dfs(root):
+
+def dfs(root: Node) -> list[Node]:
     """Depth First Search of a Binary Tree.
 
     Args:
         root (Node): first Node in Binary Tree.
 
     Returns:
-        [array] of all nodes in depth first search order.
+        [list[Node]] of all nodes in depth first search order.
     """
 
     result = []
@@ -35,14 +46,14 @@ def dfs(root):
     return result
     
 
-def dfsRecurs(root):
+def dfsRecurs(root: Node) -> list[Node]:
     """Depth First Search of a Binary Tree Recursion.
 
     Args:
         root (Node): first Node in Binary Tree.
     
     Returns:
-        [array] of all nodes in depth first search order.
+        [list[Node]] of all nodes in depth first search order.
     """
     if root == None:
         return []

@@ -1,15 +1,15 @@
 """Memoize a Grid Traveler function."""
 
 
-def gridTraveler(x, y):
+def gridTraveler(x: int, y: int) -> int:
     """Function that calculates the shortest path in a gird traveler.
 
     Args:
-        x (Number): size of grid we will be traveling in.
-        y (Number): size of grid we will be traveling in.
+        x (int): size of grid we will be traveling in.
+        y (int): size of grid we will be traveling in.
 
     Returns:
-        [Number] the amount of ways we can travel grid.
+        [int] the amount of ways we can travel grid.
     """
     if x == 1 and y == 1:
         return 1
@@ -19,16 +19,16 @@ def gridTraveler(x, y):
     return gridTraveler(x - 1, y) + gridTraveler(x, y - 1)
 
 
-def gridTravelerMemoized(x, y, memo = {}):
+def gridTravelerMemoized(x: int, y: int, memo: dict = {}) -> int:
     """Memoized function that calculates gridTraveler sequence of a given number.
 
     Args:
-        x (Number): size of grid we will be traveling in.
-        y (Number): size of grid we will be traveling in.
-        memo (Object):  used as a cache to store previously computed values.
+        x (int):     size of grid we will be traveling in.
+        y (int):     size of grid we will be traveling in.
+        memo (dict): used as a cache to store previously computed values.
 
     Returns: 
-        [Number] the resulting gridTraveler number.
+        [int] the resulting gridTraveler number.
     """
     key = str(x) + "," + str(y)
 

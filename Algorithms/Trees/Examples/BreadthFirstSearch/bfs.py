@@ -2,22 +2,33 @@
 
 
 class Node:
-    """Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str):  Value being stored in node of tree.
+        left (Node):  left node that this node points to.
+        right (Node): right node that this node points to.
+    """
 
-    def __init__(self, value):
-        """Initialize Node."""
+    def __init__(self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of tree.
+        """
         self.value = value
         self.left  = None
         self.right = None
 
-def bfs(root):
+
+def bfs(root: Node) -> list[Node]:
     """Breadth First Search of a Binary Tree.
 
     Args:
         root (Node): first Node in Binary Tree.
 
     Returns:
-        [array] of all nodes in depth first search order.
+        [list[Node]] of all nodes in depth first search order.
     """
     result = []
     nodes = [ root ]
@@ -28,6 +39,7 @@ def bfs(root):
 
         if current.left:
             nodes.append(current.left)
+
         if current.right:
             nodes.append(current.right)
 

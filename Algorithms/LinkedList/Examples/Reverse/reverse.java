@@ -16,7 +16,7 @@ class Node {
 }
 
 /**
- * Reverse a linkedlist
+ * Reverse a linkedlist.
  */
 public class reverse {
     /**

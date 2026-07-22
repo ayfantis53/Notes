@@ -3,6 +3,7 @@
 ### Dynamic programming: 
 * is an algorithmic technique for solving complex problems by breaking them down into simpler, overlapping subproblems.
 * effective for optimization problems, where the goal is to find the best possible solution among a set of choices.
+
 ### The core idea behind dynamic programming relies on two key properties:
 1. **Optimal Substructure**: 
     * An optimal solution to the overall problem can be constructed from optimal solutions to its subproblems. 
@@ -13,6 +14,7 @@
     * Dynamic programming addresses this by storing the results of these subproblems.
     * so they only need to be computed once. 
     * called memoization (for top-down approaches) or tabulation (for bottom-up approaches).
+
 ### How it works:
 1. **Top-down (Memoization)**: 
     * This approach starts with the main problem and recursively breaks it down into subproblems. 
@@ -22,6 +24,7 @@
     * This approach starts by solving the smallest subproblems first and then uses their solutions to build up the solutions for larger subproblems.
     * eventually reaching the solution for the original problem. 
     * The results are typically stored in a table (array) and filled in a systematic order.
+
 ### Memoization Recipe
 1. **Make it work**
     - visualize problem as a tree.
@@ -31,6 +34,7 @@
     - add a memo object.
     - add a base case to return memo values.
     - store return values into memo.
+
 ### Tabulation Recipe
 1. Visualize the problem as a table.
 2. Size the table based on the inputs.
@@ -38,6 +42,27 @@
 4. Seed the trivial answer into the table.
 5. Iterate through the table.
 6. Fill further positions based on the current position.
+
+
+## COMPLILING/RUN CODE
+> run code
+```bash
+cd <directory_with_file>
+
+# JavaScript: 
+node <fileName>.js
+
+# Python:   
+python <fileName>.py
+
+# java: 
+# compile                               run     
+javac <fileName>.java               &&  java <fileName>
+
+# cpp:
+# compile                               run        
+g++ <fileName>.cpp -o <fileName>    &&  ./<fileName>
+``` 
 
 ## REFERENCE
 - [Learn to Solve Algorithmic Problems & Coding Challenges](https://www.youtube.com/watch?v=oBt53YbR9Kk)

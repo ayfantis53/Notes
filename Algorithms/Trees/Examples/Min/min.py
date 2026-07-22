@@ -2,23 +2,30 @@
 
 
 class Node:
-    """Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str):  Value being stored in node of tree.
+        left (Node):  left node that this node points to.
+        right (Node): right node that this node points to.
+    """
 
-    def __init__(self, value):
-        """Initialize Node."""
+    def __init__(self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of tree.
+        """
         self.value = value
         self.left  = None
         self.right = None
 
 
-def minDFS(root):
+def minDFS(root: Node) -> None:
     """Depth First Search find min of a Binary Tree.
 
     Args:
-        root(Node): first Node in Binary Tree.
-
-    Returns:
-        [void] 
+        root (Node): first Node in Binary Tree.
     """
     min   = float('inf')
     nodes = [root]
@@ -30,6 +37,7 @@ def minDFS(root):
         
         if current.right != None:
             nodes.append(current.right)
+
         if current.left != None:
             nodes.append(current.left) 
 
@@ -37,39 +45,38 @@ def minDFS(root):
     return
 
 
-def minBFS(root):
+def minBFS(root: Node) -> None:
     """Breadth First Search find min of a Binary Tree.
 
     Args:
-        root(Node): first Node in Binary Tree.
-
-    Returns:
-        [void] 
+        root (Node): first Node in Binary Tree.
     """
-    min   = float('inf')
+    min = float('inf')
     nodes = [root]
 
     while len(nodes) > 0:
         current = nodes.pop(0)
+
         if current.value < min:
             min = current.value
         
         if current.right != None:
             nodes.append(current.right)
+
         if current.left != None:
             nodes.append(current.left) 
 
     print(f'[{min}] is the MINIMUM of all tree nodes')
     return
 
-def minDFSRecurs(root):
+def minDFSRecurs(root: Node) -> int:
     """Depth First Search find min of a Binary Tree recursively.
 
     Args:
-        root(Node): first Node in Binary Tree.
+        root (Node): first Node in Binary Tree.
 
     Returns:
-        [Number] returns smallest number in tree.
+        [int] returns smallest number in tree.
     """
     if root == None:
         return float('inf')

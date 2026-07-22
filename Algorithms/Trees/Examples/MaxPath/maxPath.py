@@ -2,23 +2,30 @@
 
 
 class Node:
-    """Class that defines our Node."""
+    """Class that defines our Node.
+    
+    Attributes:
+        value (str):  Value being stored in node of tree.
+        left (Node):  left node that this node points to.
+        right (Node): right node that this node points to.
+    """
 
-    def __init__(self, value):
-        """Initialize Node."""
+    def __init__(self, value: str) -> None:
+        """Initializes the Node object.
+        
+        Args:
+            value (str): Value being stored in node of tree.
+        """
         self.value = value
         self.left  = None
         self.right = None
 
 
-def maxPathDFS(root):
+def maxPathDFS(root: Node) -> None:
     """Depth First Search find max path of a Binary Tree.
 
     Args:
-        root (Node): first Node in Binary Tree.
-
-    Returns:
-        [void] 
+        root (Node): first Node in Binary Tree. 
     """
     sum = 0
     nodes = [root]
@@ -38,14 +45,11 @@ def maxPathDFS(root):
     return
 
 
-def maxPathBFS(root):
+def maxPathBFS(root: Node) -> None:
     """Breadth First Search find max path of a Binary Tree.
 
     Args:
         root (Node): first Node in Binary Tree.
-
-    Returns:
-        [void] 
     """
     sum = 0
     nodes = [root]
@@ -65,17 +69,15 @@ def maxPathBFS(root):
     return
 
 
-def maxPathDFSRecurs(root):
+def maxPathDFSRecurs(root: Node) -> None:
     """Depth First Search find max path of a Binary Tree recursively.
 
     Args:
         root (Node): first Node in Binary Tree.
-
-    Returns:
-        [void] 
     """
     if root == None:
         return float('-inf')
+    
     if root.right == None and root.left == None:
         return root.value
     
