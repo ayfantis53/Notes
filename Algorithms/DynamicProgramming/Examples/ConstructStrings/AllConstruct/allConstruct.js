@@ -8,20 +8,25 @@
 /**
  * Finds out all ways we can construct a string out of given substrings.
  * O(n^m * k) time complexity           O(n^m) Space complexity
- * @param {String} target word we are trying to make using substrings.
- * @param {Array} substrs substrings we are testing to create target word.
- * @returns [bool]
+ * @param {String} target  word we are trying to make using substrings.
+ * @param {Array} wordBank substrings we are testing to create target word.
+ * @returns [Array] of all string combinations.
  */
 const allConstruct = (target, wordBank) => {
-    if (target === '') return [[]];
+    // Checks if a target is empty, stops the function, & returns a list containing an empty list.
+    if (target === '') { return [[]] };
 
     const result = [];
     
+    // loop through every item in wordBank.
     for (let word of wordBank) {
         if (target.indexOf(word) === 0) {
+            // Extracts a portion of a string or array by removing a prefix.
             const suffix     = target.slice(word.length);
             const suffixWays = allConstruct(suffix, wordBank);
+            // takes suffixWays & creates new array adding word to each item in suffixWays.
             const targetWays = suffixWays.map(way => [ word, ...way ]);
+            // unpacks all items from targetWays array & adds them to end of result array using the spread operator.
             result.push(...targetWays);
         }
     }
@@ -32,21 +37,29 @@ const allConstruct = (target, wordBank) => {
 /**
  * Memoized Finds out all ways we can construct a string out of given substrings.
  * O(n * m^2) time complexity           O(m^2) Space complexity
- * @param {String} target word we are trying to make using substrings.
+ * @param {String} target  word we are trying to make using substrings.
  * @param {Array} wordBank substrings we are testing to create target word.
- * @returns [bool]
+ * @param {Array} memo      cache or storage container that saves the output of a function.
+ * @returns [Array] of all string combinations.
  */
 const allConstructMemoized = (target, wordBank, memo = []) => {
+    // checks if key target already exists inside a dictionary memo.
     if (target in memo) { return memo[target]; }
+    // Checks if a target is empty, stops the function, & returns a list containing an empty list.
     if (target === '') { return [[]]; }
 
     const result = [];
     
+    // loop through every item in wordBank.
     for (let word of wordBank) {
+        // Checks if the string target starts with the string word.
         if (target.indexOf(word) === 0) {
+            // Extracts a portion of a string or array by removing a prefix.
             const suffix     = target.slice(word.length);
             const suffixWays = allConstructMemoized(suffix, wordBank, memo);
+            // takes suffixWays & creates new array adding word to each item in suffixWays.
             const targetWays = suffixWays.map(way => [ word, ...way ]);
+            // unpacks all items from targetWays array & adds them to end of result array using the spread operator.
             result.push(...targetWays);
         }
     }
@@ -60,20 +73,28 @@ const allConstructMemoized = (target, wordBank, memo = []) => {
  * O(n^m) time complexity           O(n^m) Space complexity
  * @param {String} target word we are trying to make using substrings.
  * @param {Array} substrs substrings we are testing to create target word.
- * @returns [bool]
+ * @returns [Array] of all string combinations.
  */
 const allConstructTabulated = (target, wordBank) => {
+    // creates a two-dimensional array (a matrix) filled with empty arrays.
     const table = Array(target.length + 1)
         .fill(null)
         .map(() => []);
 
+    // sets the first item of an array to a nested array containing an empty array.
     table[0] = [[]];
 
+    // loops as many times as length of target word.
     for (let i = 0; i <= target.length; i++) {
+        // table[i] is not considered empty.
         if (table[i].length > 0) {
+            // loop through every item in wordBank.
             for (let word of wordBank) {
+                // slices a portion of a string (i: start, word.length: end) see if it equals word.
                 if (target.slice(i, i + word.length) === word) {
+                    // creates new array, appending the value word to end of every nested array found inside table[i].
                     const newCombinations = table[i].map(subArray => [...subArray, word]);
+                    // adds new items to array located at a specific index inside a larger array or object.
                     table[i + word.length].push(...newCombinations);
                 }
             }
@@ -81,27 +102,6 @@ const allConstructTabulated = (target, wordBank) => {
     }
 
     return table[target.length];
-} 
-
-function allConstructTabulation(target, wordBank) {
-  const table = Array(target.length + 1)
-    .fill(null)
-    .map(() => []); // Initialize with empty arrays.
-
-  table[0] = [[]]; // Base case: one way to construct an empty string.
-
-  for (let i = 0; i <= target.length; i++) {
-    if (table[i].length > 0) { // Only proceed if a prefix can be constructed.
-      for (let word of wordBank) {
-        if (target.slice(i, i + word.length) === word) {
-          const newCombinations = table[i].map(combo => [...combo, word]);
-          table[i + word.length].push(...newCombinations);
-        }
-      }
-    }
-  }
-
-  return table[target.length];
 }
 
 // Main Code
