@@ -1,0 +1,9 @@
+---
+- name: Install nginx
+  become: yes             # Become Super user (sudo)
+  become_method: doas     # Become Method - sudo (pfexec, doas, ksu, runes)
+  hosts: all
+  tasks:
+  - yum:
+      name: nginx
+      state: latest

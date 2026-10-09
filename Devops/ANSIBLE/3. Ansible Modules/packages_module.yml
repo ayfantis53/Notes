@@ -1,0 +1,26 @@
+# CENTOS INSTALL
+---
+- name: Install web on CentOS
+  hosts: all
+  tasks:
+    - ansible.builtin.yum:
+        name: httpd
+        state: present
+
+# UBUNUTU INSTALL
+---
+- name: Install web on Ubuntu
+  hosts: all
+  tasks:
+    - ansible.builtin.apt:
+        name: httpd
+        state: present
+
+# ANY OS INSTALL
+---
+- name: Install web on any Host
+  hosts: all
+  tasks:
+    - ansible.builtin.package:
+        name: httpd
+        state: present

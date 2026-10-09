@@ -1,0 +1,8 @@
+---
+- name: Start httpd service
+  hosts: all
+  tasks:
+    - ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: yes        # enable service to start automatically when system starts up

@@ -1,0 +1,7 @@
+---
+- name: Gives you the name configured for the host in inventory file
+  hosts: web1
+  tasks:    
+    - name: Returns all hosts under a given group
+      ansible.builtin.debug:
+        msg: "{{ inventory_hostname }}"   # web1

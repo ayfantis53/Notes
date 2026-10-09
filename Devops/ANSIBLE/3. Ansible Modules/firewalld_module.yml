@@ -1,0 +1,17 @@
+# Configure Firewalld rules
+# can configure a rule to block or allow traffic from a port, protocol, particular service, or source address.
+---
+- name: Add Firewalld rule
+  hosts: all
+  tasks:
+    - ansible.builtin.firewalld:
+        port: 8080/tcp
+        service: http
+        source: 192.0.0/24
+
+        zone: public      # can configure a zone to which the rule has to be added.
+
+        state: enabled    # and specify a state for the rule (whether rule should be added or not).
+
+        permanent: yes    # Persist rule across reboots (rule is not applied immediately, only when system reboots)
+        immediate: yes    # Fixes above problem

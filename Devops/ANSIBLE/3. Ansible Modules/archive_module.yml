@@ -1,0 +1,17 @@
+---
+- name: Archive
+  hosts: all
+  tasks:
+    - name: Compress a folder
+      archive:
+        path: /opt/app/web
+        dest: /tmp/web.gz
+
+        format: zip|tar|bz2|xz|gz
+
+    - name: Uncompress a folder
+      unarchive:
+        src: /tmp/web.gz
+        dest: /opt/app/web
+
+        remote_src: yes     # Indicates compressed file is already on hosts

@@ -1,0 +1,8 @@
+---
+- name: Print Facts
+  hosts: all
+  tasks:
+    - debug:
+        var: ansible_facts
+
+# ansible-playbook -i inventory print_facts.yml

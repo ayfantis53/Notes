@@ -1,0 +1,16 @@
+---
+- name: Install httpd
+  hosts: all
+  tasks:
+  - name: Install httpd
+    yum:
+      name: httpd
+      state: installed
+
+  - name: Start httpd service
+    service:
+      name: httpd
+      state: started
+
+# ansible-playbook start_at.yml --start-at-task "Start httpd service"
+ 

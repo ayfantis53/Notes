@@ -1,0 +1,25 @@
+---
+- name: Users and Groups
+  hosts: all
+  tasks:
+    - name: Create a user Andrew
+      ansible.builtin.user:
+        name: Andrew
+        uid: 1001
+        group: developers
+        shell: /bin/bash
+
+    - name: Create a group
+      ansible.builtin.group:
+        name: developers
+
+---
+- name: Authorized keys module
+  hosts: all
+  tasks:
+    - name: Configure ssh keys
+      ansible.builtin.authorized_keys:
+        user: andrew
+        state: present
+        key: |
+         ssh-rsa AAAB3NzaC1yc2EAAAADAQAB

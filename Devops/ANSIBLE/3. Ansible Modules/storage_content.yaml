@@ -1,0 +1,14 @@
+---
+- name: Storage
+  hosts: all
+  tasks:
+    - name: Create LVM Volume Group
+      ansible.builtin.lvg:
+        vg: vg1
+        pvs: /dev/sdb1, dev2/sdb2
+
+    - name: Create LVM Volume
+      ansible.builtin.lvol:
+        vg: vg1
+        lv: lvol1
+        size: 2g

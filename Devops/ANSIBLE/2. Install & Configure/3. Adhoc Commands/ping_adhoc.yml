@@ -1,0 +1,7 @@
+---
+- name: Ping Servers
+  hosts: all
+  tasks:
+    - ping:
+
+# ansible -m ping all

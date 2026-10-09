@@ -1,0 +1,39 @@
+---
+- name: Get magic vars from hosts
+  hosts: all
+  tasks:    
+    - name: Print DNS name of server
+      ansible.builtin.debug:
+        msg: "{{ hostvars['web2'].dns_server }}"
+  
+    - name: Print the host or IP of server
+      ansible.builtin.debug:
+        msg: "{{ hostvars['web2'].ansible_host }}"
+
+    - name: Print the facts
+      ansible.builtin.debug:
+        msg: "{{ hostvars['web2'].ansible_fact }}"
+
+    - name: Print the facts architecture
+      ansible.builtin.debug:
+        msg: "{{ hostvars['web2'].ansible_fact.architecture }}"
+
+---
+- name: Get magic vars from hosts (Alternate Syntax)
+  hosts: all
+  tasks:    
+    - name: Print DNS name of server
+      ansible.builtin.debug:
+        msg: "{{ hostvars['web2']['dns_server'] }}"
+  
+    - name: Print the host or IP of server
+      ansible.builtin.debug:
+        msg: "{{ hostvars['web2']['ansible_host'] }}"
+
+    - name: Print the facts
+      ansible.builtin.debug:
+        msg: "{{ hostvars['web2']['ansible_fact'] }}"
+
+    - name: Print the facts architecture
+      ansible.builtin.debug:
+        msg: "{{ hostvars['web2']['ansible_fact']['architecture'] }}"

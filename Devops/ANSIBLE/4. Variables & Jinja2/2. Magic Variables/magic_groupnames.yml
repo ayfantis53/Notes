@@ -1,0 +1,12 @@
+---
+- name: Get magic vars from host groups
+  hosts: web1
+  tasks:    
+    - name: Returns all hosts under a given group
+      ansible.builtin.debug:
+        msg: "{{ groups['americas'] }}"   # web1 web2
+
+
+    - name: Returns all groups that the hostname is a part of
+      ansible.builtin.debug:
+        msg: "{{ group_names }}"   # web_servers americas

@@ -1,0 +1,33 @@
+---
+- name: Check /etc/hosts file
+  hosts: all
+  tasks:    
+    - name: stat module help to find the file info
+      ansible.builtin.shell: cat /etc/hosts
+      register: result
+    
+    - ansible.builtin.debug:  # print result of command execution. Stored in stdout parameter.
+        var: result           # specify .stdout 
+
+- name: Play 2
+  hosts: all
+  tasks:
+    - name: Debug
+      ansible.builtin.debug:                        
+        var: result.rc        # specify .rc for return code.
+
+---
+- name:
+  hosts: all
+  tasks:    
+    - name: stat module help to find the file info
+      stat:
+        path: /var/run
+        register: result
+    
+    # for your reference, check the outputs of these.
+    - debug:
+        var=result.stat
+    
+    # your code goes here...
+    - shell: echo "{{result.stat}}" > /tmp/by_ansible

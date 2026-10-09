@@ -1,0 +1,9 @@
+---
+- name: Install httpd
+  hosts: all
+  tasks:
+  - yum:
+      name: httpd
+      state: installed
+
+# ansible-playbook check_mode_or_dry_run.yml --check

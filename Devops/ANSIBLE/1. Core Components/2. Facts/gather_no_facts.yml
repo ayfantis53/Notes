@@ -1,0 +1,9 @@
+---
+- name: Print Hello message
+  hosts: all
+  gather_facts: no
+  tasks:
+    - debug:
+        msg: Hello From Ansible!
+
+# ansible-playbook -i inventory gather_no_facts.yml

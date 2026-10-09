@@ -1,0 +1,14 @@
+---
+- name: Cron Job
+  hosts: all
+  tasks:
+    - name: Create a scheduled task
+      ansible.builtin.cron:
+        name: Run daily health report
+        job: sh /opt/scripts/health.sh
+        
+        month: 2
+        day: 19
+        hour: 8
+        minute: 10
+        weekday: 1        # 1 is for monday 0 for sunday * means all
