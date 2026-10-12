@@ -1,0 +1,13 @@
+---
+- name: Update dns server
+  hosts: all
+  tasks:
+    - nsupdate:
+        server: '{{ dns_server }}'
+
+- hosts: web_servers
+  tasks:
+    - name: Copy index.html to remote web_servers
+      template:                                       # Use template instead of copy module since source file is j2 template.
+        src: index.html.j2
+        dest: /var/www/nginx-default/index.html

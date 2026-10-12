@@ -1,0 +1,4 @@
+# inventory/host_vars/web1.yml
+
+ansible_host: 000.00.0.000
+other_vars: example

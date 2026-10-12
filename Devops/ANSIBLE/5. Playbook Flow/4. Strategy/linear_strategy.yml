@@ -1,0 +1,20 @@
+# Servers are run in parallel at same time, waits for task to finish on all servers before next task.
+# Its the default strategy
+---
+- name: Deploy web application
+  hosts: server1, server2, server3
+  tasks:
+    - name: Install dependencies
+        << Code hidden >>
+
+    - name: Install MySQL Database
+        << Code hidden >>
+
+    - name: Start MySQL Service
+        << Code hidden >>
+
+    - name: Install Python Flask Dependencies
+        << Code hidden >>
+
+    - name: Run web-server
+        << Code hidden >>

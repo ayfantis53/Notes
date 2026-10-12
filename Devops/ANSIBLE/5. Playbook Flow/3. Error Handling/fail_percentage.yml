@@ -1,0 +1,19 @@
+---
+- name: Deploy web application
+  hosts: server1, server2, server3
+  max_fail_percentage: 30              # If 30% of servers fail stop whole playbook and exit.
+  tasks:
+    - name: Install dependencies
+        << Code hidden >>
+
+    - name: Install MySQL Database
+        << Code hidden >>
+
+    - name: Start MySQL Service
+        << Code hidden >>
+
+    - name: Install Python Flask Dependencies
+        << Code hidden >>
+
+    - name: Run web-server
+        << Code hidden >>

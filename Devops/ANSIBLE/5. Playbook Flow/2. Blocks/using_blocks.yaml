@@ -1,0 +1,47 @@
+---
+- name: NOT Using Blocks
+  hosts: server1
+  tasks:
+    - name: Install MySQL
+      ansible.builtin.yum: name=mysql-server state=present
+      become_user: db-user
+      when: ansible_facts['distribution'] == 'CentOS'
+
+    - name: Start MySQL Service
+      ansible.builtin.service: name=mysql-server state=started
+      become_user: db-user
+      when: ansible_facts['distribution'] == 'CentOS'
+
+    - name: Install NGINX
+      ansible.builtin.yum: name=nginx state=present
+      become_user: web-user
+      when: ansible_facts['distribution'] == 'CentOS'
+
+    - name: Start NGINX Service
+      ansible.builtin.service: name=nginx state=started
+      become_user: web-user
+      when: ansible_facts['distribution'] == 'CentOS'
+
+
+# Above code more organized.
+---
+- name: USING Blocks
+  hosts: server1
+  tasks:
+    - block:
+        - name: Install MySQL
+          ansible.builtin.yum: name=mysql-server state=present
+        - name: Start MySQL Service
+          ansible.builtin.service: name=mysql-server state=started
+
+      become_user: db-user
+      when: ansible_facts['distribution'] == 'CentOS'
+
+    - block:
+        - name: Install NGINX
+          ansible.builtin.yum: name=nginx state=present
+        - name: Start NGINX Service
+          ansible.builtin.service: name=nginx state=started
+
+      become_user: web-user
+      when: ansible_facts['distribution'] == 'CentOS'  

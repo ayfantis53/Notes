@@ -23,7 +23,7 @@
         {{ ["The","name","is","Bond"] | join("") }} # The name is Bond
         ```
 
-    - Condition
+    - loops/Condition
         ```ini
         {%- for num in [0,1,2,3,4] %}
             {%- if number == 2 %}
@@ -53,3 +53,11 @@
     ```
 - When creating templates in roles
     * put them under a `template` directory
+    * project
+        - README.md
+        - templates
+        - tasks
+        - handlers
+        - vars
+        - defaults
+        - meta
