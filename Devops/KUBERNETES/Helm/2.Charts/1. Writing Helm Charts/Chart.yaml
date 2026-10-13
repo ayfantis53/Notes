@@ -1,0 +1,16 @@
+apiVersion: v2
+name: nginx-chart
+description: Basic nginx website
+
+#...
+type: application
+
+#...
+version: 0.1.0
+
+#...
+appVersion: "1.16.0"
+
+maintainers:
+  - email: john@example.com
+    name: john smith
