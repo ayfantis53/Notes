@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-nginx       # helm install hello-world-1 ./nginx-chart --> release name will be hello-world-1-nginx
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: hello-world
+    template:
+      metadata:
+        labels:
+          app: hello-world
+      spec:
+        containers:
+          - name: hello-world
+            image: {{ default "nginx" .Values.image.repository }}:{{ .Values.image.tag }}
+            ports:
+              - name: http
+                containerPort: 80
+                protocol: TCP

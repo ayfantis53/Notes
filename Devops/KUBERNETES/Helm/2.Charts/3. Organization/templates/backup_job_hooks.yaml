@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}-nginx
+  annotations:
+    "helm.sh/hook": pre-upgrade         # configures this job as a pre upgrade job and no longer considered a normal template file.
+    "helm.sh/hook-weight": "5"          # Can have multiple hooks per step. Set the weight to tell what order to run in.
+    "helm.sh/hook-delete-policy": hook-succeeded  # deletes previous resource before next hook is launched.
+spec:                                   
+  template:
+    metadata:
+      name: {{ .Release.Name }}-nginx
+    spec:
+      containers:
+      - name: pre-upgrade-backup-job
+        image: "alpine"
+        command: ["/bin/backup.sh"]
+      restartPolicy: Never
