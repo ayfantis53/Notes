@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: cpu-resource-constraint
+spec:
+  limits:
+  - default:              # Limit
+      cpu: 500m
+    defaultRequest:       # Request
+      cpu: 500m
+    max:                  # Limit              
+      cpu: "1"
+    min:                  # Request
+      cpu: 100m
+    type: Container
+
+
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: cpu-resource-constraint
+spec:
+  limits:
+  - default:              # Limit
+      memory: 1Gi
+    defaultRequest:       # Request
+      memory: 1Gi
+    max:                  # Limit              
+      memory: 1Gi
+    min:                  # Request
+      memory: 500Mi
+    type: Container
