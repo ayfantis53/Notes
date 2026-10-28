@@ -1,0 +1,8 @@
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: high-priority
+value: 1000000000
+description: "Priority class for mission critical pods"
+globalDefault: true # Sets default priority of all the pods if theyre not defined in pod. Can only be defined in a a single priority class.
+preemptionPolicy: PreemptLowerPriority  # kills existing workload if lower priority exists on node
