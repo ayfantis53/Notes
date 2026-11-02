@@ -1,0 +1,8 @@
+apiVersion: kubescheduler.config.k8s.io/v1
+kind: KubeSchedulerConfiguration
+profiles:
+  - schedulerName: my-scheduler
+leaderElection:                       # Used if we have multiple copies of scheduler running on different master nodes. (Only one can be active at a time)
+  leaderElect: true
+  resourceNamespace: kube-system
+  resourceName: lock-object-my-scheduler

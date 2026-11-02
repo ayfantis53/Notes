@@ -1,0 +1,16 @@
+# Scheduler depolyed as pod
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-custom-scheduler
+  namespace: kube-system
+spec:
+  containers:
+    - command:
+        - kube-scheduler
+        - --address=127.0.0.1
+        - --kubeconfig=/etc/kubernetes/scheduler.config
+        - --config=/etc/kubernetes/my-scheduler-config.yaml
+      image: k8s.gcr.io/kube-scheduler-amd-64:v1.XX.X
+      name: kube-scheduler

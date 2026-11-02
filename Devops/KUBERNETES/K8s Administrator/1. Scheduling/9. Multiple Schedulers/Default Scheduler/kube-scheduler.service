@@ -1,0 +1,2 @@
+ExecStart=/usr/local/bin/kube-scheduler \\
+    --config=/etc/kubernetes/config/kube-scheduler.yaml
