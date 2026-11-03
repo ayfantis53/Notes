@@ -1,0 +1,19 @@
+# /etc/kubernetes/manifests/kube-apiserver.yaml
+---
+apiVersion: v1
+kind: pods
+metadata:
+  creationTimestamp: null
+  name: kube-apiserver
+  namespace: kube-system
+spec:
+  containers:
+    - command:
+        - kube-apiserver
+        - --authorization-mode=Node,rbac
+        - --advertise-address=172.17.0.107
+        - --allow-privileged=true
+        - --enabled-bootstrap-token-auth=true
+        - --enabled-admission-plugins=NodeRestriction,NamespaceAutoProvision
+      image: k8s.gcr.io/kube-apiserver-amd64:v1.11.3
+      name: kube-apiserver
