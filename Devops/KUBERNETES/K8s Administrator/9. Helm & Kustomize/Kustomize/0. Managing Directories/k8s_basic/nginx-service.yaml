@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-loadbalancer-service
+  # kustomization file will add labels.company: KodeKloud to this line
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    company: KodeKloud
+    component: nginx
+  type: LoadBalancer

@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-loadbalancer-service
+  # kustomization file will add labels.company: KodeKloud to this line
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      company: KodeKloud
+      component: nginx
+  template:
+    metadata:
+      labels:
+        company: KodeKloud
+        component: nginx
+    spec:
+      containers:
+        - image: nginx
+          name: nginx

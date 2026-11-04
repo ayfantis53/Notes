@@ -1,0 +1,36 @@
+# recommended just in case theres any breaking version changes.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+
+# kubernetes resources (files) to be managed by kustomize.
+resources:
+  - ngnix-deployment.yaml
+  - ngnix-service.yaml
+
+
+# ======
+# Customizations that need to be made
+# ======
+
+# Sets the namespace for all resources managed by this kustomization.
+namespace: lab
+
+# Prepends text to the metadata.name of all resources.
+namePrefix: KodeKloud-
+
+# Adds these labels to metadata.labels on all resources.
+commonLabels:
+  org: KodeKloud
+
+# Add common annotations to all resources.
+commonAnnotations:
+  branch: master
+
+# Appends text to the metadata.name of all resources.
+nameSuffix: -dev
+
+images:
+  - name: nginx           # Original image name/path found in your resources
+    newName: haproxy      # Replacement repository/image name
+    newTag: "2.4"         # New version tag
