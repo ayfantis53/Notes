@@ -1,0 +1,10 @@
+## recommended just in case theres any breaking version changes.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+
+## kubernetes resources (files) to be managed by kustomize.
+resources:
+  - 
+
+  

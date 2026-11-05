@@ -1,0 +1,88 @@
+## recommended just in case theres any breaking version changes.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+
+## kubernetes resources (files) to be managed by kustomize.
+resources:
+  - api-deployment.yaml
+
+### -------------- Replace Lists -------------- ###
+## Json 6902 patch (Inline) replace image & name nginx with haproxy.
+patches:
+  - target:
+      kind: Deployment  
+      name: api-deployment
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0
+        value: 
+          name: haproxy
+          image: haproxy
+
+## Strategic merge patch (Inline) replace name: nginx image to haproxy.
+patches:
+    patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: api-deployment
+      spec:
+        template:
+          spec:
+            containers:
+              - name: nginx
+                image: haproxy
+
+### -------------- Add Lists -------------- ###
+## Json 6902 patch (Inline) add name & image:nginx.
+patches:
+  - target:
+      kind: Deployment  
+      name: api-deployment
+    # dash means add it ant the end of list, can replace with an idex number to specify where to put it.
+    patch: |-
+      - op: add
+        path: /spec/template/spec/containers/-
+        value: 
+          name: haproxy
+          image: haproxy
+
+## Strategic merge patch (Inline) add name & image:nginx.
+patches:
+    patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: api-deployment
+      spec:
+        template:
+          spec:
+            containers:
+              - name: haproxy
+                image: haproxy
+
+
+### -------------- Delete Lists -------------- ###
+## Json 6902 patch (Inline) delete image: database
+patches:
+  - target:
+      kind: Deployment  
+      name: api-deployment
+    patch: |-
+      - op: remove
+        path: /spec/template/spec/containers/1
+
+## Strategic merge patch (Inline) delete org: KodeKloud.
+patches:
+    patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: api-deployment
+      spec:
+        template:
+          spec:
+            containers:
+              - $patch: delete
+                name: database

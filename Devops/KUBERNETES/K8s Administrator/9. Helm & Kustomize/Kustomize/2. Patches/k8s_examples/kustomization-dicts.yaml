@@ -1,0 +1,79 @@
+## recommended just in case theres any breaking version changes.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+
+## kubernetes resources (files) to be managed by kustomize.
+resources:
+  - api-deployment.yaml
+
+### -------------- Replace Dictionary -------------- ###
+## Json 6902 patch (Inline) replace component
+patches:
+  - target:
+      kind: Deployment  
+      name: api-deployment
+    patch: |-
+      - op: replace
+        path: /spec/template/metadata/labels/component
+        value: web
+
+## Strategic merge patch (Inline) replace component
+patches:
+    patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: api-deployment
+      spec:
+        template:
+          metadata:
+            labels:
+              component: web
+
+### -------------- Add Dictionary -------------- ###
+## Json 6902 patch (Inline) add org: KodeKloud
+patches:
+  - target:
+      kind: Deployment  
+      name: api-deployment
+    patch: |-
+      - op: add
+        path: /spec/template/metadata/labels/org
+        value: KodeKloud
+
+## Strategic merge patch (Inline) add org: KodeKloud
+patches:
+    patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: api-deployment
+      spec:
+        template:
+          metadata:
+            labels:
+              org: KodeKloud
+
+### -------------- Delete Dictionary -------------- ###
+## Json 6902 patch (Inline) delete org: KodeKloud
+patches:
+  - target:
+      kind: Deployment  
+      name: api-deployment
+    patch: |-
+      - op: remove
+        path: /spec/template/metadata/labels/org
+
+## Strategic merge patch (Inline) delete org: KodeKloud
+patches:
+    patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: api-deployment
+      spec:
+        template:
+          metadata:
+            labels:
+              org: null

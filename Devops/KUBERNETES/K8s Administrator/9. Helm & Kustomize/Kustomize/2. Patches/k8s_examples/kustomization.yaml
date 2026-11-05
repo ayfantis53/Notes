@@ -1,0 +1,34 @@
+## recommended just in case theres any breaking version changes.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+
+## kubernetes resources (files) to be managed by kustomize.
+resources:
+  - api-deployment.yaml
+
+
+## Json 6902 patch (Inline)
+# Patch 1: Update name & replicas in a Deployment (Strategic Merge style)
+patches:
+  - target:
+      kind: Deployment  
+      name: api-deployment
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: web-deployment
+      - op: replace
+        path: /spec/replicas
+        value: 5
+
+## Strategic merge patch (Inline)
+# Patch 1: Update name & replicas in a Deployment (Strategic Merge style)
+patches:
+    patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: api-deployment
+      spec:
+        replicas: 5
