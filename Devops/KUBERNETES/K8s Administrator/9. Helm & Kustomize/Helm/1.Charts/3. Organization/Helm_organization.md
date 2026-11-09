@@ -1,6 +1,6 @@
 ## NAMED TEMPLATES
 -------------------------------------------------------------
-- Used for repetetive code
+- Used for repetitive code
 
 
 ## CHART HOOKS

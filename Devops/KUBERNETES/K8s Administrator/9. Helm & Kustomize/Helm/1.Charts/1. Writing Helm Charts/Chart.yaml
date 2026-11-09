@@ -1,0 +1,19 @@
+
+apiVersion: v2                      # v1 - Helm 2 & v2 - Helm 3
+appVersion: "1.16.0"                # Version of the application inside chart.
+version: 0.1.0                      # Version of the Chart itself, independent of version of the app.
+name: nginx-chart
+description: Basic nginx website
+type: application                   # 2 types of charts (application - default type & library - provides utilities).
+dependencies:                       # Other helm charts we depend on to run
+  - condition: mariadb.enabled
+    name: mariadb
+    repository: https://charts.bitnami.com/bitnami
+    version: 9.x.x
+keywords:                           #  Used for searching for chart in a pulic chart repository.
+  - application
+  - blog
+  - wordpress
+maintainers:                        # information about maintainers.
+  - email: john@example.com
+    name: john smith
