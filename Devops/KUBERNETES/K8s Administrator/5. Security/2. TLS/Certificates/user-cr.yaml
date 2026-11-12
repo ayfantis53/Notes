@@ -1,0 +1,19 @@
+---
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  name: {{ $USER }}
+spec:
+  groups:
+    - system:authenticated
+  signerName: kubernetes.io/kube-apiserver-client     # Who is allowed to sign them.
+  expirationSeconds: 600                              # Controls certificate validity.
+  usages:
+    - client auth
+  request: {{ $BASE64_ENCODED_CSR }}                  # Specify certificate request in base64 format.
+  conditions:
+    - type: Approved
+      status: "True"
+      reason: KubectlApprove
+      message: "This CSR was approved by kubectl certificate approve."
+      lastUpdateTime: "2026-02-03T11:46:10Z"
