@@ -1,0 +1,17 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: developer
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["list", "get", "create", "update", "delete"]
+  - apiGroups: [""]
+    resources: ["ConfigMap"]
+    verbs: ["create"]
+  # Restrict access to resource names
+  - apiGroups: [""]
+    resources: ["ConfigMap"]
+    verbs: ["create"]
+    resourceNames: ["blue", "orange"]
