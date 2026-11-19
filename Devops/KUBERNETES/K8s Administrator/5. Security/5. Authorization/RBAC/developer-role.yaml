@@ -2,6 +2,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
+  namespace: default
   name: developer
 rules:
   - apiGroups: [""]
@@ -15,3 +16,6 @@ rules:
     resources: ["ConfigMap"]
     verbs: ["create"]
     resourceNames: ["blue", "orange"]
+
+
+# kubectl create role developer-role --namespace=default --verb=list,get,create,delete --resource=pods

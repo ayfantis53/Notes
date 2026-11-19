@@ -1,6 +1,11 @@
 ## RBAC
 -------------------------------------------------------------
 
+- Inspect the environment and identify the authorization modes configured on the cluster.
+    ```bash
+    # and look for --authorization-mode.
+    kubectl describe pod kube-apiserver-controlplane -n kube-system | grep -A 3
+    ```
 - Create a role
     * make a role object with role definition yaml file `developer-role.yaml`
     * rules that developers can be assigned.
@@ -44,4 +49,10 @@
 
     # See if dev-user can create pods.
     kubectl auth can-i create pods --as dev-user
+    ```
+
+- Inspect the environment and identify the authorization modes configured on the cluster.
+    ```bash
+    # --authorization-mode
+    kubectl describe pod kube-apiserver-controlplane -n kube-system
     ```
